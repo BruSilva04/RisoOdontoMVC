@@ -14,5 +14,78 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    color: black;
+    background-color: #7b37ac88;
+}
+
+/* navbar */
+.navbar {
+    background-color: white !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container > a {
+    font-size: 1.5rem;
+}
+
+.logo {
+    font-family: 'Gemunu Libre', serif;
+    font-weight: 600;
+    color: blueviolet;
+}
+
+.collapse {
+    gap: 2rem;
+}
+
+.btn-nav {
+    border: 1px solid blueviolet;
+    border-radius: 2rem;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5rem 3rem;
+    color: blueviolet;
+    transition: all .3s;
+}
+
+    .btn-nav:hover {
+        border: none;
+        color: white;
+        transition: all .3s;
+        background-color: blueviolet;
+    }
+
+.nav-link.active {
+    border-bottom: 2px solid blueviolet;
+}
+
+
+
+.box {
+    color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-170%, 15%);
+    background-color: rgba(51, 0, 85, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+}
+
+h1{
+    text-align:center;
+}
+
+.form-group > input{
+    width:520px;
+}
+
+.btn{
+
+    width:520px;
 }
