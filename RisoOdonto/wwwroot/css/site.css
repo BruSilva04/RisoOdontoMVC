@@ -63,6 +63,11 @@ body {
     border-bottom: 2px solid blueviolet;
 }
 
+.btns{
+    display:flex;
+    gap:5px;
+}
+
 
 
 .box {
