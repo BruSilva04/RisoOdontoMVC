@@ -41,10 +41,6 @@ namespace RisoOdonto.Models
         //chave estrangeira
         [ForeignKey("TipoUsuario")]
         public int TipoUsuarioId { get; set; }
-        public virtual TipoUsuario? TipoUsuario { get; set; }
-
-
-
-      
+        public virtual TipoUsuario? TipoUsuario { get; set; }      
     }
 }
