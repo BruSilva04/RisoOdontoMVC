@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using NuGet.Packaging.Signing;
+using System.Timers;
+using System.Runtime.CompilerServices;
 
 namespace RisoOdonto.Models
 {
@@ -15,8 +17,8 @@ namespace RisoOdonto.Models
             [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
             public DateTime Data_Consulta { get; set; }
             [Required]
-            [Timestamp]
-            public Timestamp Horario { get; set; }
+            [DateTimeConstant]
+            public DateOnly Horario { get; set; }
             [Required]
             public bool Primeira_Consulta { get; set; }           
             [Required]
