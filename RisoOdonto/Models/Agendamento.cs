@@ -17,8 +17,9 @@ namespace RisoOdonto.Models
             [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
             public DateTime Data_Consulta { get; set; }
             [Required]
-            //[DateTimeConstant]
-            public DateOnly Horario { get; set; }
+            [DataType(DataType.Date)]
+            [DisplayFormat(DataFormatString = "{HH:mm:ss}", ApplyFormatInEditMode = true)]
+            public DateTime Horario { get; set; }
             [Required]
             public bool Primeira_Consulta { get; set; }           
             [Required]

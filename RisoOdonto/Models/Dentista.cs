@@ -10,7 +10,7 @@ namespace RisoOdonto.Models
         [Key]
         public int IdDentista { get; set; }
         [Required]
-        [MaxLength(50)]
+        [MaxLength(150)]
         public string Nome { get; set; }
         [Required]
         [MaxLength(150)]
