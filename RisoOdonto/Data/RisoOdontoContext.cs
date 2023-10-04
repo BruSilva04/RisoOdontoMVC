@@ -17,5 +17,7 @@ namespace RisoOdonto.Data
         public DbSet<RisoOdonto.Models.Paciente> Paciente { get; set; } = default!;
 
         public DbSet<RisoOdonto.Models.Dentista>? Dentista { get; set; }
+
+        public DbSet<RisoOdonto.Models.Agendamento>? Agendamento { get; set; }
     }
 }

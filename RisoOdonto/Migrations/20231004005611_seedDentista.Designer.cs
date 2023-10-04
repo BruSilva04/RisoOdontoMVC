@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RisoOdonto.Data;
 
@@ -11,9 +12,11 @@ using RisoOdonto.Data;
 namespace RisoOdonto.Migrations
 {
     [DbContext(typeof(RisoOdontoContext))]
-    partial class RisoOdontoContextModelSnapshot : ModelSnapshot
+    [Migration("20231004005611_seedDentista")]
+    partial class seedDentista
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

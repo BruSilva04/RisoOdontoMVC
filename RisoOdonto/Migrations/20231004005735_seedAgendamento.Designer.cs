@@ -12,8 +12,8 @@ using RisoOdonto.Data;
 namespace RisoOdonto.Migrations
 {
     [DbContext(typeof(RisoOdontoContext))]
-    [Migration("20231003225937_seedDentista")]
-    partial class seedDentista
+    [Migration("20231004005735_seedAgendamento")]
+    partial class seedAgendamento
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,81 @@ namespace RisoOdonto.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("RisoOdonto.Models.Agendamento", b =>
+                {
+                    b.Property<int>("IdAgendamento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdAgendamento"));
+
+                    b.Property<DateTime>("Data_Consulta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DentistaId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Horario")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PacienteId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Primeira_Consulta")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Status_Consulta")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("IdAgendamento");
+
+                    b.HasIndex("DentistaId");
+
+                    b.HasIndex("PacienteId");
+
+                    b.ToTable("Agendamento");
+                });
+
+            modelBuilder.Entity("RisoOdonto.Models.Dentista", b =>
+                {
+                    b.Property<int>("IdDentista")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDentista"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Especialidade")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Login_Dentista")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.HasKey("IdDentista");
+
+                    b.ToTable("Dentista");
+                });
 
             modelBuilder.Entity("RisoOdonto.Models.Paciente", b =>
                 {
@@ -95,6 +170,25 @@ namespace RisoOdonto.Migrations
                     b.HasKey("IdTipoUsuario");
 
                     b.ToTable("TipoUsuario");
+                });
+
+            modelBuilder.Entity("RisoOdonto.Models.Agendamento", b =>
+                {
+                    b.HasOne("RisoOdonto.Models.Dentista", "Dentista")
+                        .WithMany()
+                        .HasForeignKey("DentistaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RisoOdonto.Models.Paciente", "Paciente")
+                        .WithMany()
+                        .HasForeignKey("PacienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Dentista");
+
+                    b.Navigation("Paciente");
                 });
 
             modelBuilder.Entity("RisoOdonto.Models.Paciente", b =>
