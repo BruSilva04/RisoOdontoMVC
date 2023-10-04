@@ -23,6 +23,7 @@ namespace RisoOdonto.Models
         [MaxLength(6)]
         public string Senha { get; set; }
         [Required]
-        public int Especialidade { get; set; }
+        [MaxLength(50)]
+        public string Especialidade { get; set; }
     }
 }

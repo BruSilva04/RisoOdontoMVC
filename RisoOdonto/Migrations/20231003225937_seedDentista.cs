@@ -10,7 +10,7 @@ namespace RisoOdonto.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql("INSERT INTO Dentista (Nome, Email, Login_Dentista, Senha,Especialidade) VALUES ('Fabio Neves Filho','fabio.odonto@gmail.com', 'fabio.filho','142536','Cirurgião')");
+            //migrationBuilder.Sql("INSERT INTO Dentista (Nome, Email, Login_Dentista, Senha,Especialidade) VALUES ('Fabio Neves Filho','fabio.odonto@gmail.com', 'fabio.filho','142536','Cirurgião')");
         }
 
         /// <inheritdoc />
