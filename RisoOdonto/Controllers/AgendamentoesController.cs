@@ -10,6 +10,7 @@ using RisoOdonto.Models;
 
 namespace RisoOdonto.Controllers
 {
+
     public class AgendamentoesController : Controller
     {
         private readonly RisoOdontoContext _context;
@@ -24,6 +25,11 @@ namespace RisoOdonto.Controllers
         {
             var risoOdontoContext = _context.Agendamento.Include(a => a.Dentista).Include(a => a.Paciente);
             return View(await risoOdontoContext.ToListAsync());
+        }
+
+        public IActionResult Agendamento()
+        {
+            return View();
         }
 
         // GET: Agendamentoes/Details/5

@@ -69,10 +69,11 @@ body {
     gap:5px;
 }
 
-/*#andregion*/
+/*#endregion*/
 
-/*#region*/
 /*#Cadastro*/
+/*#region*/
+
 .box {
     color: white;
     position: relative;
@@ -134,7 +135,7 @@ h1{
     width: 100%;
     letter-spacing: 2px;
 }
-/*#andregion*/
+/*#endregion*/
 
 
 
@@ -153,4 +154,4 @@ h1{
     box-shadow: 45px 25px 15px rgba(51, 0, 85, 0.6);
 }
 
-/*#andregion*/
+/*#endregion*/
