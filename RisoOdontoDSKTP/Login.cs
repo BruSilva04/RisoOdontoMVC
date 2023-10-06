@@ -39,6 +39,7 @@ namespace RisoOdontoDSKTP
                             FrmLogin formuLogin = new FrmLogin();
                             formuLogin.Show();
                             this.Visible = false;
+
                             break;
                         //case "2":
                             //Session.EmailFuncionario = txtUsuario.Text.Trim();
