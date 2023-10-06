@@ -19,5 +19,7 @@ namespace RisoOdonto.Data
         public DbSet<RisoOdonto.Models.Dentista>? Dentista { get; set; }
 
         public DbSet<RisoOdonto.Models.Agendamento>? Agendamento { get; set; }
+
+        public DbSet<RisoOdonto.Models.Funcionario>? Funcionario { get; set; }
     }
 }

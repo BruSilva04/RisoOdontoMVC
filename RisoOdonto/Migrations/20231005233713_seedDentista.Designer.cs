@@ -12,7 +12,7 @@ using RisoOdonto.Data;
 namespace RisoOdonto.Migrations
 {
     [DbContext(typeof(RisoOdontoContext))]
-    [Migration("20231004005611_seedDentista")]
+    [Migration("20231005233713_seedDentista")]
     partial class seedDentista
     {
         /// <inheritdoc />
@@ -98,6 +98,52 @@ namespace RisoOdonto.Migrations
                     b.HasKey("IdDentista");
 
                     b.ToTable("Dentista");
+                });
+
+            modelBuilder.Entity("RisoOdonto.Models.Funcionario", b =>
+                {
+                    b.Property<int>("IdFuncionario")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdFuncionario"));
+
+                    b.Property<string>("Cargo")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<DateTime>("DataNascimento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Login_Funcionario")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<int>("TipoUsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdFuncionario");
+
+                    b.HasIndex("TipoUsuarioId");
+
+                    b.ToTable("Funcionario");
                 });
 
             modelBuilder.Entity("RisoOdonto.Models.Paciente", b =>
@@ -189,6 +235,17 @@ namespace RisoOdonto.Migrations
                     b.Navigation("Dentista");
 
                     b.Navigation("Paciente");
+                });
+
+            modelBuilder.Entity("RisoOdonto.Models.Funcionario", b =>
+                {
+                    b.HasOne("RisoOdonto.Models.TipoUsuario", "TipoUsuario")
+                        .WithMany()
+                        .HasForeignKey("TipoUsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TipoUsuario");
                 });
 
             modelBuilder.Entity("RisoOdonto.Models.Paciente", b =>
