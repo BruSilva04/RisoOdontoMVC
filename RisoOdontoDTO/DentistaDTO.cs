@@ -14,6 +14,7 @@ namespace RisoOdontoDTO
         public string Email { get; set; }
         public string Login_Dentista { get; set; }
         public string Senha { get; set; }
+
         public string Especialidade { get; set; }
     }
 }
