@@ -10,7 +10,7 @@ namespace RisoOdonto.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql("INSERT INTO Agendamento (Data_Consulta, Horario, Primeira_Consulta, Status_Consulta, PacienteId, DentistaId) VALUES ('2023-05-26','11:00:00', '1','Agendado','2', '1')");
+            migrationBuilder.Sql("INSERT INTO Agendamento (Data_Consulta, Horario, Primeira_Consulta, Status_Consulta, IdPaciente, IdDentista) VALUES ('2023-05-26','11:00:00', '1','Agendado','2', '1')");
         }
 
         /// <inheritdoc />
