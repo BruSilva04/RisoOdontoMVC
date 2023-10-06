@@ -11,13 +11,13 @@ namespace RisoOdontoDAL
 	public class FuncionarioDAL:Conexao
 	{
         //autenticacao
-        public FuncionarioDTO Autenticar(string nome, string senha)
+        public FuncionarioDTO Autenticar(string email, string senha)
         {
             try
             {
                 Conectar();
-                cmd = new SqlCommand("SELECT * FROM Funcionario WHERE Nome=@nome AND Senha=@senha;", conn);
-                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd = new SqlCommand("SELECT * FROM Funcionario WHERE Email=@email AND Senha=@senha;", conn);
+                cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@senha", senha);
                 dr = cmd.ExecuteReader();
                 FuncionarioDTO obj = null;//ponteiro

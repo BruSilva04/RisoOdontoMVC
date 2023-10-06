@@ -49,8 +49,8 @@ namespace RisoOdonto.Controllers
         // GET: Agendamentoes/Create
         public IActionResult Create()
         {
-            ViewData["DentistaId"] = new SelectList(_context.Dentista, "IdDentista", "Email");
-            ViewData["PacienteId"] = new SelectList(_context.Paciente, "Id", "CPF");
+            ViewData["IdDentista"] = new SelectList(_context.Dentista, "IdDentista", "Email");
+            ViewData["IdPaciente"] = new SelectList(_context.Paciente, "Id", "CPF");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace RisoOdonto.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdAgendamento,Data_Consulta,Horario,Primeira_Consulta,Status_Consulta,PacienteId,DentistaId")] Agendamento agendamento)
+        public async Task<IActionResult> Create([Bind("IdAgendamento,Data_Consulta,Horario,Primeira_Consulta,Status_Consulta,IdPaciente,IdDentista")] Agendamento agendamento)
         {
             if (ModelState.IsValid)
             {
@@ -67,8 +67,8 @@ namespace RisoOdonto.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DentistaId"] = new SelectList(_context.Dentista, "IdDentista", "Email", agendamento.DentistaId);
-            ViewData["PacienteId"] = new SelectList(_context.Paciente, "Id", "CPF", agendamento.PacienteId);
+            ViewData["IdDentista"] = new SelectList(_context.Dentista, "IdDentista", "Email", agendamento.IdDentista);
+            ViewData["IdPaciente"] = new SelectList(_context.Paciente, "Id", "CPF", agendamento.IdPaciente);
             return View(agendamento);
         }
 
@@ -85,8 +85,8 @@ namespace RisoOdonto.Controllers
             {
                 return NotFound();
             }
-            ViewData["DentistaId"] = new SelectList(_context.Dentista, "IdDentista", "Email", agendamento.DentistaId);
-            ViewData["PacienteId"] = new SelectList(_context.Paciente, "Id", "CPF", agendamento.PacienteId);
+            ViewData["IdDentista"] = new SelectList(_context.Dentista, "IdDentista", "Email", agendamento.IdDentista);
+            ViewData["IdPaciente"] = new SelectList(_context.Paciente, "Id", "CPF", agendamento.IdPaciente);
             return View(agendamento);
         }
 
@@ -95,7 +95,7 @@ namespace RisoOdonto.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdAgendamento,Data_Consulta,Horario,Primeira_Consulta,Status_Consulta,PacienteId,DentistaId")] Agendamento agendamento)
+        public async Task<IActionResult> Edit(int id, [Bind("IdAgendamento,Data_Consulta,Horario,Primeira_Consulta,Status_Consulta,IdPaciente,IdDentista")] Agendamento agendamento)
         {
             if (id != agendamento.IdAgendamento)
             {
@@ -122,8 +122,8 @@ namespace RisoOdonto.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DentistaId"] = new SelectList(_context.Dentista, "IdDentista", "Email", agendamento.DentistaId);
-            ViewData["PacienteId"] = new SelectList(_context.Paciente, "Id", "CPF", agendamento.PacienteId);
+            ViewData["IdDentista"] = new SelectList(_context.Dentista, "IdDentista", "Email", agendamento.IdDentista);
+            ViewData["IdPaciente"] = new SelectList(_context.Paciente, "Id", "CPF", agendamento.IdPaciente);
             return View(agendamento);
         }
 

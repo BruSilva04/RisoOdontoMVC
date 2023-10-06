@@ -30,11 +30,11 @@ namespace RisoOdonto.Models
 
         //chave estrangeira
         [ForeignKey("Paciente")]
-        public int PacienteId { get; set; }
+        public int IdPaciente { get; set; }
         public virtual Paciente? Paciente { get; set; }
 
         [ForeignKey("Dentista")]
-        public int DentistaId { get; set; }
+        public int IdDentista { get; set; }
         public virtual Dentista? Dentista { get; set; }
     }
 }

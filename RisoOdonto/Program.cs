@@ -23,6 +23,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Agendamentoes}/{action=Agendamento}/{id?}");
+    pattern: "{controller=Agendamentoes}/{action=Create}/{id?}");
 
 app.Run();
