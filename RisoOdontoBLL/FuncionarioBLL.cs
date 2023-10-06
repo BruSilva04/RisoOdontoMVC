@@ -14,9 +14,9 @@ namespace RisoOdontoBLL
         FuncionarioDAL objBLL = new FuncionarioDAL();
 
         //autenticar
-        public FuncionarioDTO AuteticarUsuario(string nome, string senha)
+        public FuncionarioDTO AuteticarUsuario(string Login_Dentista, string senha)
         {
-            FuncionarioDTO user = objBLL.Autenticar(nome, senha);
+            FuncionarioDTO user = objBLL.Autenticar(Login_Dentista, senha);
 
             return user;
 
@@ -24,16 +24,12 @@ namespace RisoOdontoBLL
 
         //CRUD
         //Create
-        public void CadastrarUsuario(UsuarioDTO objCad)
+        public void CadastrarUsuario(FuncionarioDTO objCad)
         {
             objBLL.Cadastrar(objCad);
         }
 
-        //Read
-        public List<UsuarioDTO> ListarUsuario()
-        {
-            return objBLL.Listar();
-        }
+  
 
         //Delete
         public void ExcluirUsuario(int objDel)
@@ -42,21 +38,9 @@ namespace RisoOdontoBLL
         }
 
         //Update
-        public void EditarUsuario(UsuarioDTO objEdita)
+        public void EditarUsuario(FuncionarioDTO objEdita)
         {
             objBLL.Editar(objEdita);
-        }
-
-        //BuscaPorId
-        public UsuarioDTO BuscaUsuarioPorId(int objId)
-        {
-            return objBLL.BuscaPorId(objId);
-        }
-
-        //BuscaPorNome
-        public UsuarioDTO BuscaUsuarioPorNome(string objNome)
-        {
-            return objBLL.BuscaPorNome(objNome);
         }
 
         //CarregaDDL

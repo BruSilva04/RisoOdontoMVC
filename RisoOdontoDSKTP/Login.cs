@@ -1,20 +1,14 @@
-﻿using RisoOdontoDTO;
+﻿using RisoOdontoBLL;
+using RisoOdontoDSKTP.Utilitarios;
+using RisoOdontoDTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Collections.Specialized.BitVector32;
 
 namespace RisoOdontoDSKTP
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -29,37 +23,37 @@ namespace RisoOdontoDSKTP
             try
             {
                 //pegar as informacoes do usuario
-                string nome = txtUsuario.Text.Trim();
+                string Login_Funcionario = txtUsuario.Text.Trim();
                 string senha = txtSenha.Text.Trim();
 
                 FuncionarioDTO obj = new FuncionarioDTO();
-                UsuarioBLL objBLL = new UsuarioBLL();
+                FuncionarioBLL objBLL = new FuncionarioBLL();
 
-                obj = objBLL.AuteticarUsuario(nome, senha);
+                obj = objBLL.AuteticarUsuario(Login_Funcionario, senha);
                 if (obj != null)
                 {
-                    switch (obj.UsuarioTp)
+                    switch (obj.TipoUsuarioId)
                     {
                         case "1":
-                            Session.nomeUsuario = txtUser.Text.Trim();
-                            MDI_Adm formuAdm = new MDI_Adm();
-                            formuAdm.Show();
+                            Session.Login_Funcionario = txtUsuario.Text.Trim();
+                            FrmLogin formuLogin = new FrmLogin();
+                            formuLogin.Show();
                             this.Visible = false;
                             break;
-                        case "2":
-                            Session.nomeUsuario = txtUser.Text.Trim();
-                            MDI_Outros formOutros = new MDI_Outros();
-                            formOutros.Show();
-                            this.Visible = false;
-                            break;
+                        //case "2":
+                            //Session.EmailFuncionario = txtUsuario.Text.Trim();
+                            //MDI_Outros formOutros = new MDI_Outros();
+                            //formOutros.Show();
+                            //this.Visible = false;
+                            //break;
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show($"Usuário {txtUser.Text} não cadastrado !!");
+                    MessageBox.Show($"Usuário {txtUsuario.Text} não cadastrado !!");
                     Limpar.ClearControl(this);
-                    txtUser.Focus();
+                    txtUsuario.Focus();
                 }
 
 
@@ -67,7 +61,7 @@ namespace RisoOdontoDSKTP
             catch (Exception)
             {
 
-                MessageBox.Show($"Usuário {txtUser.Text} não cadastrado !!");
+                MessageBox.Show($"Usuário {txtUsuario.Text} não cadastrado !!");
             }
         }
     }

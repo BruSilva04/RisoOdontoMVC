@@ -16,15 +16,15 @@ namespace RisoOdontoDAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("SELECT * FROM Funcionario WHERE Email=@email AND Senha=@senha;", conn);
-                cmd.Parameters.AddWithValue("@email", email);
+                cmd = new SqlCommand("SELECT * FROM Funcionario WHERE Login_Funcionario=@Login_Funcionario AND Senha=@senha;", conn);
+                cmd.Parameters.AddWithValue("@Login_Funcionario", email);
                 cmd.Parameters.AddWithValue("@senha", senha);
                 dr = cmd.ExecuteReader();
                 FuncionarioDTO obj = null;//ponteiro
                 if (dr.Read())
                 {
                     obj = new FuncionarioDTO();
-                    obj.Nome = dr["Nome"].ToString();
+                    obj.Login_Funcionario = dr["Login_Funcionario"].ToString();
                     obj.Senha = dr["Senha"].ToString();
                     obj.TipoUsuarioId = dr["TipoUsuarioId"].ToString();
                 }
