@@ -23,30 +23,29 @@ namespace RisoOdontoDSKTP
             try
             {
                 //pegar as informacoes do usuario
-                string Login_Funcionario = txtUsuario.Text.Trim();
+                string nome = txtUsuario.Text.Trim();
                 string senha = txtSenha.Text.Trim();
 
                 FuncionarioDTO obj = new FuncionarioDTO();
                 FuncionarioBLL objBLL = new FuncionarioBLL();
 
-                obj = objBLL.AuteticarUsuario(Login_Funcionario, senha);
+                obj = objBLL.AuteticarUsuario(nome, senha);
                 if (obj != null)
                 {
                     switch (obj.TipoUsuarioId)
                     {
                         case "1":
-                            Session.Login_Funcionario = txtUsuario.Text.Trim();
+                            Session.Nome = txtUsuario.Text.Trim();
                             FrmLogin formuLogin = new FrmLogin();
                             formuLogin.Show();
                             this.Visible = false;
-
                             break;
-                        //case "2":
-                            //Session.EmailFuncionario = txtUsuario.Text.Trim();
-                            //MDI_Outros formOutros = new MDI_Outros();
-                            //formOutros.Show();
-                            //this.Visible = false;
-                            //break;
+                        case "2":
+                            Session.Nome = txtUsuario.Text.Trim();
+                            FrmLogin formOutros = new FrmLogin();
+                            formOutros.Show();
+                            this.Visible = false;
+                            break;
 
                     }
                 }
@@ -64,6 +63,12 @@ namespace RisoOdontoDSKTP
 
                 MessageBox.Show($"Usuário {txtUsuario.Text} não cadastrado !!");
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Limpar.ClearControl(this);
+            txtUsuario.Focus();
         }
     }
 }

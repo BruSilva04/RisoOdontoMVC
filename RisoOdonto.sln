@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RisoOdontoBLL", "RisoOdonto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RisoOdontoDSKTP", "RisoOdontoDSKTP\RisoOdontoDSKTP.csproj", "{B4BEA778-5700-478F-994D-D8D6F8783F39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RisoOdontoUI", "RisoOdontoUI\RisoOdontoUI.csproj", "{6F57CC65-DDEA-4ABD-BD1A-7969C332A3F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B4BEA778-5700-478F-994D-D8D6F8783F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4BEA778-5700-478F-994D-D8D6F8783F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4BEA778-5700-478F-994D-D8D6F8783F39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F57CC65-DDEA-4ABD-BD1A-7969C332A3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F57CC65-DDEA-4ABD-BD1A-7969C332A3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F57CC65-DDEA-4ABD-BD1A-7969C332A3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F57CC65-DDEA-4ABD-BD1A-7969C332A3F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,7 +20,7 @@ namespace RisoOdontoDAL
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocaldb;Initial Catalog=EnxamePhobosDB;Integrated Security=True");
+                conn = new SqlConnection(@"Server=tcp:risoodonto.database.windows.net,1433;Initial Catalog=RisoOdonto;Persist Security Info=False;User ID=adm;Password=Risoodonto10;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
                 conn.Open();
             }
             catch (Exception ex)

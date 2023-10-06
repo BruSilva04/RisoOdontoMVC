@@ -9,12 +9,12 @@ namespace RisoOdontoBLL
     public static class Session
     {
         //usuario
-        private static string _Login_Funcionario;
+        private static string _Nome;
 
-        public static string Login_Funcionario
+        public static string Nome
         {
-            get { return _Login_Funcionario; }
-            set { _Login_Funcionario = value; }
+            get { return _Nome; }
+            set { _Nome = value; }
         }
     }
 }

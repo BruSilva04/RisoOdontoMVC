@@ -14,9 +14,9 @@ namespace RisoOdontoBLL
         FuncionarioDAL objBLL = new FuncionarioDAL();
 
         //autenticar
-        public FuncionarioDTO AuteticarUsuario(string Login_Dentista, string senha)
+        public FuncionarioDTO AuteticarUsuario(string nome, string senha)
         {
-            FuncionarioDTO user = objBLL.Autenticar(Login_Dentista, senha);
+            FuncionarioDTO user = objBLL.Autenticar(nome, senha);
 
             return user;
 
