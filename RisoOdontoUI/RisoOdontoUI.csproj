@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Agendamento.aspx" />
     <Content Include="resources\css\agendamento.css" />
+    <Content Include="resources\js\site.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="resources\font\" />
-    <Folder Include="resources\js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
