@@ -17,8 +17,32 @@
 </head>
 
 <body>
-    <form id="form1" runat="server">
+	 <form id="form1" runat="server">
+
+  <div>
+
+      <asp:Calendar ID="Calendario" runat="server" ondayrender="Calendario_DayRender"
+
+          onselectionchanged="Calendario_SelectionChanged"
+
+          onvisiblemonthchanged="Calendario_VisibleMonthChanged">
+
+      </asp:Calendar>
+
+   
+
+      <br />
+
+      <asp:Label ID="lblMsg" runat="server"></asp:Label>
+
+  </div>
+
+  </form>
+
+
+   <%-- <form id="form1" runat="server">
   
+
 		<section class="ftco-section">
 	<div class="container">
 	<div class="row justify-content-center">
@@ -94,7 +118,7 @@
 	</div>
 	</div>
 	</div>
-	</section>
+	</section>--%>
 		
     </form>
 
