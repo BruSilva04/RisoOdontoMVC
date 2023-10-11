@@ -36,8 +36,8 @@ namespace RisoOdontoDSKTP
                     {
                         case "1":
                             Session.Nome = txtUsuario.Text.Trim();
-                            FrmLogin formuLogin = new FrmLogin();
-                            formuLogin.Show();
+                            FrmLogin formuInicial = new FrmLogin();
+                            formuInicial.Show();
                             this.Visible = false;
                             break;
                         case "2":
@@ -70,5 +70,6 @@ namespace RisoOdontoDSKTP
             Limpar.ClearControl(this);
             txtUsuario.Focus();
         }
+
     }
 }

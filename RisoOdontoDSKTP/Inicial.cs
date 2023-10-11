@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RisoOdontoDSKTP
 {
-    public partial class FrmCadastrar : Form
+    public partial class FrmInicial : Form
     {
-        public FrmCadastrar()
+        public FrmInicial()
         {
             InitializeComponent();
         }
