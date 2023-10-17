@@ -68,7 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Agendamento.aspx" />
+    <Content Include="resources\css\DarkMode.css" />
     <Content Include="resources\css\agendamento.css" />
+    <Content Include="resources\js\DarkMode.js" />
     <Content Include="resources\js\site.js" />
     <Content Include="Web.config" />
   </ItemGroup>
