@@ -2,6 +2,7 @@
 using RisoOdontoDSKTP.Utilitarios;
 using RisoOdontoDTO;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace RisoOdontoDSKTP
@@ -71,5 +72,59 @@ namespace RisoOdontoDSKTP
             txtUsuario.Focus();
         }
 
+        bool isDark = false;
+
+        public void DarkMode()
+        {
+            if (isDark)
+            {
+                if (chkDark.Checked)
+                {
+                    this.BackColor = Color.Black;
+                    lblUser.ForeColor = Color.White;
+                    lblSenha.ForeColor = Color.White;
+                    btnCancelar.ForeColor = Color.White;
+                    btnEntrar.ForeColor = Color.Black;
+                    chkDark.ForeColor = Color.White;
+                    chkLight.ForeColor = Color.White;
+
+                    foreach (Control ct in this.Controls)
+                        if (ct is Panel)
+                            (ct as Panel).ForeColor = Color.White;
+                    chkLight.CheckState = CheckState.Unchecked;
+                }
+
+            }
+            else
+            {
+                if(chkLight.Checked)
+                {              
+                this.BackColor = Color.White;
+                lblUser.ForeColor = Color.Black;
+                lblSenha.ForeColor = Color.Black;
+                btnCancelar.ForeColor = Color.Black;
+                btnEntrar.ForeColor = Color.White;
+                chkDark.ForeColor = Color.Black;
+                chkLight.ForeColor = Color.Black;
+
+                    foreach (Control ct in this.Controls)
+                    if (ct is Panel)
+                        (ct as Panel).ForeColor = Color.Black;
+                    chkDark.CheckState = CheckState.Unchecked;
+                }
+            }
+        }
+
+        private void chkDark_CheckedChanged(object sender, EventArgs e)
+        {
+            isDark = true;
+            DarkMode();
+        }
+
+        private void chkLight_CheckedChanged(object sender, EventArgs e)
+        {
+            isDark = false;
+            DarkMode();
+        }
     }
 }

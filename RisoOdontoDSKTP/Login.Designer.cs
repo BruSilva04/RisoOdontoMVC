@@ -34,10 +34,12 @@
             this.btnEntrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chkLight = new System.Windows.Forms.CheckBox();
+            this.chkDark = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,34 +103,34 @@
             this.txtUsuario.Size = new System.Drawing.Size(400, 26);
             this.txtUsuario.TabIndex = 23;
             // 
-            // label3
+            // lblSenha
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(229, 323);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 25);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Senha :";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSenha.Location = new System.Drawing.Point(229, 323);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(86, 25);
+            this.lblSenha.TabIndex = 26;
+            this.lblSenha.Text = "Senha :";
             // 
-            // label2
+            // lblUser
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(229, 252);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Usuário :";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUser.Location = new System.Drawing.Point(229, 252);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(98, 25);
+            this.lblUser.TabIndex = 27;
+            this.lblUser.Text = "Usuário :";
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblLogin.Location = new System.Drawing.Point(248, 151);
+            this.lblLogin.Location = new System.Drawing.Point(247, 147);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(405, 73);
             this.lblLogin.TabIndex = 28;
@@ -145,21 +147,47 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
+            // chkLight
+            // 
+            this.chkLight.AutoSize = true;
+            this.chkLight.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkLight.Location = new System.Drawing.Point(12, 571);
+            this.chkLight.Name = "chkLight";
+            this.chkLight.Size = new System.Drawing.Size(60, 20);
+            this.chkLight.TabIndex = 34;
+            this.chkLight.Text = "Claro";
+            this.chkLight.UseVisualStyleBackColor = true;
+            this.chkLight.CheckedChanged += new System.EventHandler(this.chkLight_CheckedChanged);
+            // 
+            // chkDark
+            // 
+            this.chkDark.AutoSize = true;
+            this.chkDark.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDark.Location = new System.Drawing.Point(12, 545);
+            this.chkDark.Name = "chkDark";
+            this.chkDark.Size = new System.Drawing.Size(68, 20);
+            this.chkDark.TabIndex = 33;
+            this.chkDark.Text = "Escuro";
+            this.chkDark.UseVisualStyleBackColor = true;
+            this.chkDark.CheckedChanged += new System.EventHandler(this.chkDark_CheckedChanged);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(856, 580);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(856, 598);
+            this.Controls.Add(this.chkDark);
             this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.chkLight);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
@@ -177,10 +205,12 @@
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox chkLight;
+        private System.Windows.Forms.CheckBox chkDark;
     }
 }
 
