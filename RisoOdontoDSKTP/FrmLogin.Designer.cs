@@ -130,7 +130,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblLogin.Location = new System.Drawing.Point(247, 147);
+            this.lblLogin.Location = new System.Drawing.Point(243, 160);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(405, 73);
             this.lblLogin.TabIndex = 28;

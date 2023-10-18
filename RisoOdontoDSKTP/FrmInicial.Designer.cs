@@ -42,7 +42,6 @@
             this.excluirPacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarPacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilitariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blocoDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,13 +55,11 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.Calculadora = new System.Windows.Forms.ToolStripButton();
+            this.Notepad = new System.Windows.Forms.ToolStripButton();
+            this.Word = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.Sair = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,15 +94,15 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.BlueViolet;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.atendimentoToolStripMenuItem,
             this.agendaToolStripMenuItem,
-            this.sairToolStripMenuItem,
             this.utilitariosToolStripMenuItem,
             this.sairToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(905, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(908, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -150,12 +147,6 @@
             this.agendaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.agendaToolStripMenuItem.Text = "&Agenda";
             // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.sairToolStripMenuItem.Text = "&Configurações";
-            // 
             // utilitariosToolStripMenuItem
             // 
             this.utilitariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -169,19 +160,19 @@
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.calculadoraToolStripMenuItem.Text = "&Calculadora";
             // 
             // blocoDeNotasToolStripMenuItem
             // 
             this.blocoDeNotasToolStripMenuItem.Name = "blocoDeNotasToolStripMenuItem";
-            this.blocoDeNotasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.blocoDeNotasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.blocoDeNotasToolStripMenuItem.Text = "&Bloco de Notas";
             // 
             // wordToolStripMenuItem
             // 
             this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
-            this.wordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.wordToolStripMenuItem.Text = "&Word";
             // 
             // sairToolStripMenuItem1
@@ -192,6 +183,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.BlueViolet;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(56, 56);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Cadastro,
@@ -201,16 +193,14 @@
             this.toolStripSeparator1,
             this.toolStripButton5,
             this.toolStripSeparator2,
-            this.toolStripButton6,
-            this.toolStripSeparator3,
-            this.toolStripButton8,
-            this.toolStripButton7,
-            this.toolStripButton9,
+            this.Calculadora,
+            this.Notepad,
+            this.Word,
             this.toolStripSeparator4,
-            this.toolStripButton10});
+            this.Sair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(905, 63);
+            this.toolStrip1.Size = new System.Drawing.Size(908, 63);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -222,6 +212,7 @@
             this.Cadastro.Name = "Cadastro";
             this.Cadastro.Size = new System.Drawing.Size(60, 60);
             this.Cadastro.Text = "Cadastro";
+            this.Cadastro.Click += new System.EventHandler(this.Cadastro_Click);
             // 
             // Listar
             // 
@@ -269,67 +260,57 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 63);
             // 
-            // toolStripButton6
+            // Calculadora
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(60, 60);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.Calculadora.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Calculadora.Image = ((System.Drawing.Image)(resources.GetObject("Calculadora.Image")));
+            this.Calculadora.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Calculadora.Name = "Calculadora";
+            this.Calculadora.Size = new System.Drawing.Size(60, 60);
+            this.Calculadora.Text = "Calculadora";
+            this.Calculadora.Click += new System.EventHandler(this.Calculadora_Click);
             // 
-            // toolStripSeparator3
+            // Notepad
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 63);
+            this.Notepad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Notepad.Image = ((System.Drawing.Image)(resources.GetObject("Notepad.Image")));
+            this.Notepad.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Notepad.Name = "Notepad";
+            this.Notepad.Size = new System.Drawing.Size(60, 60);
+            this.Notepad.Text = "Notepad";
+            this.Notepad.Click += new System.EventHandler(this.Notepad_Click);
             // 
-            // toolStripButton8
+            // Word
             // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(60, 60);
-            this.toolStripButton8.Text = "toolStripButton8";
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(60, 60);
-            this.toolStripButton7.Text = "toolStripButton7";
-            // 
-            // toolStripButton9
-            // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(60, 60);
-            this.toolStripButton9.Text = "toolStripButton9";
+            this.Word.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Word.Image = ((System.Drawing.Image)(resources.GetObject("Word.Image")));
+            this.Word.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Word.Name = "Word";
+            this.Word.Size = new System.Drawing.Size(60, 60);
+            this.Word.Text = "Word";
+            this.Word.Click += new System.EventHandler(this.Word_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 63);
             // 
-            // toolStripButton10
+            // Sair
             // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(60, 60);
-            this.toolStripButton10.Text = "toolStripButton10";
+            this.Sair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Sair.Image = ((System.Drawing.Image)(resources.GetObject("Sair.Image")));
+            this.Sair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Sair.Name = "Sair";
+            this.Sair.Size = new System.Drawing.Size(60, 60);
+            this.Sair.Text = "Sair";
+            this.Sair.Click += new System.EventHandler(this.Sair_Click);
             // 
             // FrmInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(905, 636);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(908, 636);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -358,7 +339,6 @@
         private System.Windows.Forms.ToolStripMenuItem excluirPacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarPacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utilitariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blocoDeNotasToolStripMenuItem;
@@ -372,12 +352,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripButton Calculadora;
+        private System.Windows.Forms.ToolStripButton Notepad;
+        private System.Windows.Forms.ToolStripButton Word;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripButton Sair;
     }
 }
