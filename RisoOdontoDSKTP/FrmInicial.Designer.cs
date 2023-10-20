@@ -222,6 +222,7 @@
             this.Listar.Name = "Listar";
             this.Listar.Size = new System.Drawing.Size(60, 60);
             this.Listar.Text = "Listar";
+            this.Listar.Click += new System.EventHandler(this.Listar_Click);
             // 
             // Excluir
             // 

@@ -22,7 +22,6 @@ namespace RisoOdontoDSKTP
 
         private void Sair_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{Session.Nome.ToUpper()} sua sessão será finalizada", "Atenção", MessageBoxButtons.OK);
             Application.Exit();
         }
 
@@ -45,6 +44,11 @@ namespace RisoOdontoDSKTP
         {
             FrmCadastro obj = new FrmCadastro();
             obj.ShowDialog();
+        }
+
+        private void Listar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
