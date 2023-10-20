@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListar));
             this.gBox1 = new System.Windows.Forms.GroupBox();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.textId = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbo1 = new System.Windows.Forms.ComboBox();
             this.txtData = new System.Windows.Forms.MaskedTextBox();
@@ -48,7 +44,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.textId = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.gBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,50 +76,6 @@
             this.gBox1.Size = new System.Drawing.Size(353, 411);
             this.gBox1.TabIndex = 24;
             this.gBox1.TabStop = false;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.BackColor = System.Drawing.Color.Red;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFechar.Location = new System.Drawing.Point(828, 23);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(125, 60);
-            this.btnFechar.TabIndex = 25;
-            this.btnFechar.Text = "FECHAR";
-            this.btnFechar.UseVisualStyleBackColor = false;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.BlueViolet;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisar.Location = new System.Drawing.Point(524, 115);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(90, 35);
-            this.btnPesquisar.TabIndex = 28;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(366, 121);
-            this.txtId.MaxLength = 150;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(89, 26);
-            this.txtId.TabIndex = 26;
-            // 
-            // textId
-            // 
-            this.textId.AutoSize = true;
-            this.textId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textId.Location = new System.Drawing.Point(361, 93);
-            this.textId.Name = "textId";
-            this.textId.Size = new System.Drawing.Size(33, 24);
-            this.textId.TabIndex = 27;
-            this.textId.Text = "Id:";
             // 
             // label8
             // 
@@ -259,6 +216,50 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Nome:";
             // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.Color.Red;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFechar.Location = new System.Drawing.Point(828, 23);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(125, 60);
+            this.btnFechar.TabIndex = 25;
+            this.btnFechar.Text = "FECHAR";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisar.Location = new System.Drawing.Point(524, 115);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(90, 35);
+            this.btnPesquisar.TabIndex = 28;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(366, 121);
+            this.txtId.MaxLength = 150;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(89, 26);
+            this.txtId.TabIndex = 26;
+            // 
+            // textId
+            // 
+            this.textId.AutoSize = true;
+            this.textId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textId.Location = new System.Drawing.Point(361, 93);
+            this.textId.Name = "textId";
+            this.textId.Size = new System.Drawing.Size(33, 24);
+            this.textId.TabIndex = 27;
+            this.textId.Text = "Id:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Enabled = false;
@@ -270,12 +271,24 @@
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.BlueViolet;
+            this.label6.Location = new System.Drawing.Point(350, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(247, 39);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Listar Paciente";
+            // 
             // FrmListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtId);
@@ -317,5 +330,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
