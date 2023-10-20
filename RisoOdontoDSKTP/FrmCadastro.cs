@@ -1,4 +1,5 @@
 ﻿using RisoOdontoBLL;
+using RisoOdontoDSKTP.Utilitarios;
 using RisoOdontoDTO;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,8 @@ namespace RisoOdontoDSKTP
     {
 
         //instanciando
-        FuncionarioBLL objBLL = new FuncionarioBLL();
-        FuncionarioDTO objCad = new FuncionarioDTO();
+        PacienteBLL objBLL = new PacienteBLL();
+        PacienteDTO objCad = new PacienteDTO();
         public FrmCadastro()
         {
             InitializeComponent();
@@ -32,7 +33,6 @@ namespace RisoOdontoDSKTP
         private void FrmCadastro_Load(object sender, EventArgs e)
         {
             CarregaCbo1();
-            cbo1.Enabled = false;
         }
 
         //carrega cbo1
@@ -54,14 +54,20 @@ namespace RisoOdontoDSKTP
             //estrutura de checagem
             if (string.IsNullOrEmpty(txtNome.Text))
             {
-                MessageBox.Show("Digite o nome do usuário !!");
+                MessageBox.Show("Digite o nome do Paciente !!");
                 txtNome.Focus();
                 validator = false;
             }
             else if (string.IsNullOrEmpty(txtEmail.Text))
             {
-                MessageBox.Show("Digite o email do usuário !!");
+                MessageBox.Show("Digite o email do Paciente !!");
                 txtEmail.Focus();
+                validator = false;
+            }
+            else if (string.IsNullOrEmpty(txtTelefone.Text))
+            {
+                MessageBox.Show("Digite o Telefone do Paciente!!");
+                txtTelefone.Focus();
                 validator = false;
             }
             else if (string.IsNullOrEmpty(txtData.Text))
@@ -70,16 +76,22 @@ namespace RisoOdontoDSKTP
                 txtData.Focus();
                 validator = false;
             }
-            else if (string.IsNullOrEmpty(txtCargo.Text))
+            else if (string.IsNullOrEmpty(txtCpf.Text))
             {
-                MessageBox.Show("Digite o Cargo do !!");
-                txtCargo.Focus();
+                MessageBox.Show("Digite o CPF do Paciente !!");
+                txtCpf.Focus();
                 validator = false;
             }
-            else if (string.IsNullOrEmpty(txtSenha.Text))
+            else if (string.IsNullOrEmpty(txtCidade.Text))
             {
-                MessageBox.Show("Digite a senha do usuário !!");
-                txtSenha.Focus();
+                MessageBox.Show("Digite a cidade do Paciente !!");
+                txtCidade.Focus();
+                validator = false;
+            }
+            else if (string.IsNullOrEmpty(txtEndereco.Text))
+            {
+                MessageBox.Show("Digite o Endereço do Paciente !!");
+                txtEndereco.Focus();
                 validator = false;
             }
             else if (string.IsNullOrEmpty(txtSenha.Text))
@@ -97,5 +109,48 @@ namespace RisoOdontoDSKTP
 
         }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar.ClearControl(this);
+            txtNome.Focus();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            if (ValidaForm())
+            {
+                PacienteDTO objDTO = new PacienteDTO();
+
+                //preeencher os dados fornecidos pelo usuári
+                objDTO.Nome = txtNome.Text.Trim();
+                objDTO.Email = txtEmail.Text.Trim();
+                objDTO.Telefone = Convert.ToInt32(txtSenha.Text.Trim());
+                //ajustar a data
+                DateTime dt;
+                if (DateTime.TryParse(txtData.Text, out dt))
+                {
+                    objDTO.DataNasciemento = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Digite uma data válida!!");
+                    txtData.Text = string.Empty;
+                    txtData.Focus();
+                    return;
+                }
+
+                objDTO.DataNasciemento = Convert.ToDateTime(txtData.Text.Trim());
+                objDTO.CPF = Convert.ToInt32(txtCpf.Text.Trim());
+                objDTO.Cidade = txtCidade.Text.Trim();
+                objDTO.Endereço = txtEndereco.Text.Trim();
+                objDTO.Senha = txtSenha.Text.Trim();
+                objDTO.TpUsuario = cbo1.SelectedValue.ToString();
+
+                Limpar.ClearControl(this);
+                btnCadastrar.Enabled = true;
+
+                MessageBox.Show($"Paciente {objDTO.Nome} Cadastrado com sucesso!!");
+            }
+        }
     }
 }

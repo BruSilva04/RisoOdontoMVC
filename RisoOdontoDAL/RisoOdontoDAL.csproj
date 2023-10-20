@@ -44,6 +44,7 @@
     <Compile Include="Conexao.cs" />
     <Compile Include="DentistaDAL.cs" />
     <Compile Include="FuncionarioDAL.cs" />
+    <Compile Include="PacienteDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
