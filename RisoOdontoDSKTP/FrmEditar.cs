@@ -13,15 +13,27 @@ using System.Windows.Forms;
 
 namespace RisoOdontoDSKTP
 {
-    public partial class FrmCadastro : Form
+    public partial class FrmEditar : Form
     {
 
-        //instanciando
         PacienteBLL objBLL = new PacienteBLL();
-        PacienteDTO objCad = new PacienteDTO();
-        public FrmCadastro()
+        PacienteDTO objDTO = new PacienteDTO();
+        public FrmEditar()
         {
             InitializeComponent();
+        }
+
+        private void FrmEditar_Load(object sender, EventArgs e)
+        {
+            CarregaCbo1();
+            gBox1.Enabled = btnEditar.Enabled = btnSalvar.Enabled = false;
+        }
+
+        public void CarregaCbo1()
+        {
+            cbo1.ValueMember = "IdTipoUsuario";
+            cbo1.DisplayMember = "Descricao";
+            cbo1.DataSource = objBLL.CarregaTpUsuarioDDL().ToList();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -29,23 +41,7 @@ namespace RisoOdontoDSKTP
             Close();
         }
 
-        //load
-        private void FrmCadastro_Load(object sender, EventArgs e)
-        {
-            CarregaCbo1();
-        }
 
-        //carrega cbo1
-        public void CarregaCbo1()
-        {
-            //dispaly para exibir
-            cbo1.ValueMember = "IdTipoUsuario";
-            cbo1.DisplayMember = "DescricaoTipoUsuario";
-
-            cbo1.DataSource = objBLL.CarregaTpUsuarioDDL().ToList();
-        }
-
-        //validaPage
         public bool ValidaForm()
         {
             //criando variavel de retorno
@@ -108,23 +104,66 @@ namespace RisoOdontoDSKTP
             return validator;
 
         }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            Limpar.ClearControl(this);
-            txtNome.Focus();
+            if (string.IsNullOrEmpty(txtId.Text))
+            {
+                MessageBox.Show("Preencha o campo id !!");
+                txtId.Text = string.Empty;
+                txtId.Focus();
+                return;
+            }
+
+            int codigo;
+            int.TryParse(txtId.Text, out codigo);
+
+            if (objBLL.BuscaUsuarioPorId(codigo) == null)
+            {
+                MessageBox.Show("Id inválido !!");
+                txtId.Text = string.Empty;
+                txtId.Focus();
+                return;
+            }
+            else
+            {
+                objDTO = objBLL.BuscaUsuarioPorId(codigo);
+                txtNome.Text = objDTO.Nome;
+                txtEmail.Text = objDTO.Email;
+                txtTelefone.Text = objDTO.Telefone.ToString();
+                txtData.Text = objDTO.DataNascimento.ToString();
+                txtCpf.Text = objDTO.CPF;
+                txtCidade.Text = objDTO.Cidade;
+                txtEndereco.Text = objDTO.Endereco;
+                txtSenha.Text = objDTO.Senha;
+
+                cbo1.SelectedValue = Convert.ToInt32(objDTO.TipoUsuarioId);
+                btnEditar.Enabled = true;
+            }
+            
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        //Editar - Liberação dos campos para acesso
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            gBox1.Enabled = true;
+            btnSalvar.Enabled = true;
+            txtId.Enabled = false;
+            btnPesquisar.Enabled = false;
+        }
+
+        //Update - salvando as alterações
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (ValidaForm())
             {
                 PacienteDTO objDTO = new PacienteDTO();
 
+                objDTO.IdPaciente = Convert.ToInt32(txtId.Text);
+
                 //preeencher os dados fornecidos pelo usuári
-                objDTO.Nome = txtNome.Text.Trim();
-                objDTO.Email = txtEmail.Text.Trim();
-                objDTO.Telefone = Convert.ToInt32(txtSenha.Text.Trim());
+                objDTO.Nome = txtNome.Text;
+                objDTO.Email = txtEmail.Text;
+                objDTO.Telefone = Convert.ToInt32(txtSenha.Text);
                 //ajustar a data
                 DateTime dt;
                 if (DateTime.TryParse(txtData.Text, out dt))
@@ -139,17 +178,35 @@ namespace RisoOdontoDSKTP
                     return;
                 }
 
-                objDTO.DataNascimento = Convert.ToDateTime(txtData.Text.Trim());
-                objDTO.CPF = txtCpf.Text.Trim();
-                objDTO.Cidade = txtCidade.Text.Trim();
-                objDTO.Endereco = txtEndereco.Text.Trim();
-                objDTO.Senha = txtSenha.Text.Trim();
+                objDTO.DataNascimento = Convert.ToDateTime(txtData.Text);
+                objDTO.CPF = txtCpf.Text;
+                objDTO.Cidade = txtCidade.Text;
+                objDTO.Endereco = txtEndereco.Text;
+                objDTO.Senha = txtSenha.Text;
                 objDTO.TipoUsuarioId = cbo1.SelectedValue.ToString();
 
-                Limpar.ClearControl(this);
-                btnCadastrar.Enabled = true;
 
-                MessageBox.Show($"Paciente {objDTO.Nome} Cadastrado com sucesso!!");
+                //Editando as informações
+                objBLL.Editar(objDTO);
+                Limpar.ClearControl(this);
+                txtId.Enabled = true;
+                txtId.Focus();
+                btnPesquisar.Enabled = true;
+                btnEditar.Enabled = false;
+                gBox1.Enabled = false;
+                btnSalvar.Enabled = false;
+
+                MessageBox.Show($"Paciente {objDTO.Nome} editado com sucesso!!");
+
+            }
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            {
+                //Atribui True no Handled para cancelar o evento
+                e.Handled = true;
             }
         }
     }

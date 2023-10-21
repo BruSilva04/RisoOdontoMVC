@@ -50,5 +50,16 @@ namespace RisoOdontoBLL
         {
             return objBLL.CarregaDDL();
         }
+        //BuscaPorId
+        public PacienteDTO BuscaUsuarioPorId(int objId)
+        {
+            return objBLL.BuscaPorId(objId);
+        }
+
+        //BuscaPorNome
+        public PacienteDTO BuscaUsuarioPorNome(string objNome)
+        {
+            return objBLL.BuscaPorNome(objNome);
+        }
     }
 }

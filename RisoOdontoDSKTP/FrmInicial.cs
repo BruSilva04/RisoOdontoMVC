@@ -48,7 +48,20 @@ namespace RisoOdontoDSKTP
 
         private void Listar_Click(object sender, EventArgs e)
         {
+            FrmListar obj = new FrmListar();
+            obj.ShowDialog();
+        }
 
+        private void Excluir_Click(object sender, EventArgs e)
+        {
+            FrmExcluir obj = new FrmExcluir();
+            obj.ShowDialog();
+        }
+
+        private void Editar_Click(object sender, EventArgs e)
+        {
+            FrmEditar obj = new FrmEditar();
+            obj.ShowDialog();
         }
     }
 }

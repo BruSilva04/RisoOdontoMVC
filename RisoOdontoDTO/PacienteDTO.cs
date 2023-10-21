@@ -12,11 +12,11 @@ namespace RisoOdontoDTO
         public string Nome { get; set; }
         public string Email { get; set; }
         public int Telefone { get; set; }
-        public DateTime DataNasciemento { get; set; }
-        public int CPF { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public string CPF { get; set; }
         public string Cidade { get; set; }
-        public string Endereço { get; set; }
+        public string Endereco { get; set; }
         public string Senha { get; set; }
-        public string TpUsuario { get; set; }
+        public string TipoUsuarioId { get; set; }
     }
 }

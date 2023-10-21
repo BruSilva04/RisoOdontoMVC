@@ -232,6 +232,7 @@
             this.Excluir.Name = "Excluir";
             this.Excluir.Size = new System.Drawing.Size(60, 60);
             this.Excluir.Text = "Excluir";
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // Editar
             // 
@@ -241,6 +242,7 @@
             this.Editar.Name = "Editar";
             this.Editar.Size = new System.Drawing.Size(60, 60);
             this.Editar.Text = "Editar";
+            this.Editar.Click += new System.EventHandler(this.Editar_Click);
             // 
             // toolStripSeparator1
             // 

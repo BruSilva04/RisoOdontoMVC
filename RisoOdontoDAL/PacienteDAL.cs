@@ -27,13 +27,13 @@ namespace RisoOdontoDAL
                     obj = new PacienteDTO();
                     obj.Email = dr["Email"].ToString();
                     obj.Senha = dr["Senha"].ToString();
-                    obj.TpUsuario = dr["TpUsuario"].ToString();
+                    obj.TipoUsuarioId = dr["TipoUsuarioId"].ToString();
                 }
                 return obj;
             }
             catch (Exception ex)
             {
-                throw new Exception($"Pac não cadastrado ! {ex.Message}");
+                throw new Exception($"Paciente não cadastrado ! {ex.Message}");
             }
             finally
             {
@@ -51,16 +51,16 @@ namespace RisoOdontoDAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("INSERT INTO Paciente (Nome,Email, Telefone, DataNasciemento, CPF,Cidade, Endereço,Senha,TpUsuario) VALUES (@Nome,@Email,@Telefone,@DataNasciemento,@CPF,@Cidade,@Endereço,@Senha,@TpUsuario);", conn);
+                cmd = new SqlCommand("INSERT INTO Paciente (Nome,Email, Telefone, DataNascimento, CPF,Cidade, Endereço,Senha,TipoUsuarioId) VALUES (@Nome,@Email,@Telefone,@DataNascimento,@CPF,@Cidade,@Endereço,@Senha,@TipoUsuarioId);", conn);
                 cmd.Parameters.AddWithValue("@Nome", objCad.Nome);
                 cmd.Parameters.AddWithValue("@Email", objCad.Email);
                 cmd.Parameters.AddWithValue("@Telefone", objCad.Telefone);
-                cmd.Parameters.AddWithValue("@DataNasciemento", objCad.DataNasciemento);
+                cmd.Parameters.AddWithValue("@DataNascimento", objCad.DataNascimento);
                 cmd.Parameters.AddWithValue("@CPF", objCad.CPF);
                 cmd.Parameters.AddWithValue("@Cidade", objCad.Cidade);
-                cmd.Parameters.AddWithValue("@Endereço", objCad.Endereço);
+                cmd.Parameters.AddWithValue("@Endereco", objCad.Endereco);
                 cmd.Parameters.AddWithValue("@Senha", objCad.Senha);
-                cmd.Parameters.AddWithValue("@TpUsuario", objCad.TpUsuario);
+                cmd.Parameters.AddWithValue("@TipoUsuarioId", objCad.TipoUsuarioId);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -80,7 +80,7 @@ namespace RisoOdontoDAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("SELECT IdPaciente,Nome,CPF,DataNasciemento,Email,Senha,Telefone,Cidade,Endereço,DescricaoTipoUsuario  FROM Paciente INNER JOIN TipoUsuario ON IdTipoUsuario = TpUsuario ORDER BY IdPaciente ASC;", conn);
+                cmd = new SqlCommand("SELECT IdPaciente,Nome,CPF,DataNascimento,Email,Senha,Telefone,Cidade,Endereco,DescricaoTipoUsuario  FROM Paciente INNER JOIN TipoUsuario ON IdTipoUsuario = TipoUsuarioId ORDER BY IdPaciente ASC;", conn);
                 dr = cmd.ExecuteReader();
                 List<PacienteDTO> lista = new List<PacienteDTO>();
                 while (dr.Read())
@@ -90,12 +90,12 @@ namespace RisoOdontoDAL
                     obj.Nome = dr["Nome"].ToString();
                     obj.Email = dr["Email"].ToString();
                     obj.Telefone = Convert.ToInt32(dr["Telefone"]);
-                    obj.DataNasciemento = Convert.ToDateTime(dr["DataNasciemento"]);
-                    obj.CPF = Convert.ToInt32(dr["CPF"]);
+                    obj.DataNascimento = Convert.ToDateTime(dr["DataNascimento"]);
+                    obj.CPF = dr["CPF"].ToString();
                     obj.Cidade = dr["Cidade"].ToString();
-                    obj.Endereço = dr["Endereço"].ToString();
+                    obj.Endereco = dr["Endereco"].ToString();
                     obj.Senha = dr["Senha"].ToString();
-                    obj.TpUsuario = dr["DescricaoTipoUsuario"].ToString();
+                    obj.TipoUsuarioId = dr["DescricaoTipoUsuario"].ToString();
                     lista.Add(obj);
                 }
                 return lista;
@@ -117,16 +117,16 @@ namespace RisoOdontoDAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("UPDATE Paciente SET [Nome] = @Nome,[CPF]=@CPF,[DataNasciemento]=@DataNasciemento,[Email]=@Email,[Senha]=@Senha,[Telefone]=@Telefone,[Cidade]=@Cidade,[Endereço] = @Endereço,[TpUsuario] = @TpUsuario WHERE IdPaciente = @id;", conn);
+                cmd = new SqlCommand("UPDATE Paciente SET [Nome] = @Nome,[CPF]=@CPF,[DataNascimento]=@DataNascimento,[Email]=@Email,[Senha]=@Senha,[Telefone]=@Telefone,[Cidade]=@Cidade,[Endereco] = @Endereco,[TipoUsuarioId] = @TipoUsuarioId WHERE IdPaciente = @id;", conn);
                 cmd.Parameters.AddWithValue("@Nome", objEdita.Nome);
                 cmd.Parameters.AddWithValue("@Email", objEdita.Email);
                 cmd.Parameters.AddWithValue("@Telefone", objEdita.Telefone);
-                cmd.Parameters.AddWithValue("@DataNasciemento", objEdita.DataNasciemento);
+                cmd.Parameters.AddWithValue("@DataNascimento", objEdita.DataNascimento);
                 cmd.Parameters.AddWithValue("@CPF", objEdita.CPF);
                 cmd.Parameters.AddWithValue("@Cidade ", objEdita.Cidade);
-                cmd.Parameters.AddWithValue("@Endereço", objEdita.Endereço);
+                cmd.Parameters.AddWithValue("@Endereco", objEdita.Endereco);
                 cmd.Parameters.AddWithValue("@Senha", objEdita.Senha);
-                cmd.Parameters.AddWithValue("@TpUsuario", objEdita.TpUsuario);
+                cmd.Parameters.AddWithValue("@TipoUsuarioId", objEdita.TipoUsuarioId);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -180,6 +180,82 @@ namespace RisoOdontoDAL
 
                 }
                 return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        //BuscaPorId
+        public PacienteDTO BuscaPorId(int objId)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT * FROM Paciente WHERE id = @id;", conn);
+                cmd.Parameters.AddWithValue("@id", objId);
+                dr = cmd.ExecuteReader();
+                PacienteDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new PacienteDTO();
+                    obj.IdPaciente = Convert.ToInt32(dr["id"]);
+                    obj.Nome = dr["Nome"].ToString();
+                    obj.Email = dr["Email"].ToString();
+                    obj.Telefone = Convert.ToInt32(dr["Telefone"]);
+                    obj.DataNascimento = Convert.ToDateTime(dr["DataNascimento"]);
+                    obj.CPF = dr["CPF"].ToString();
+                    obj.Cidade = dr["Cidade"].ToString();
+                    obj.Endereco = dr["Endereco"].ToString();
+                    obj.Senha = dr["Senha"].ToString();
+                    obj.TipoUsuarioId = dr["TipoUsuarioId"].ToString();
+                }
+                return obj;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        //BuscaPorNome
+        public PacienteDTO BuscaPorNome(string objNome)
+        {
+            try
+            {
+                Conectar();
+                cmd = new SqlCommand("SELECT * FROM Paciente WHERE Nome = @nome;", conn);
+                cmd.Parameters.AddWithValue("@nome", objNome);
+                dr = cmd.ExecuteReader();
+                PacienteDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new PacienteDTO();
+                    obj.IdPaciente = Convert.ToInt32(dr["IdUsuario"]);
+                    obj.Nome = dr["Nome"].ToString();
+                    obj.Email = dr["Email"].ToString();
+                    obj.Telefone = Convert.ToInt32(dr["Telefone"]);
+                    obj.DataNascimento = Convert.ToDateTime(dr["DataNascimento"]);
+                    obj.CPF = dr["CPF"].ToString();
+                    obj.Cidade = dr["Cidade"].ToString();
+                    obj.Endereco = dr["Endereco"].ToString();
+                    obj.Senha = dr["SenhaUsuario"].ToString();
+                    obj.TipoUsuarioId = dr["TipoUsuarioId"].ToString();
+                }
+                return obj;
+
             }
             catch (Exception ex)
             {
