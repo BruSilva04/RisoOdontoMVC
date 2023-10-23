@@ -36,14 +36,13 @@
             this.textId = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
             this.gBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbo1 = new System.Windows.Forms.ComboBox();
             this.txtData = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -56,7 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gBox1.SuspendLayout();
             this.SuspendLayout();
@@ -138,9 +136,7 @@
             this.gBox1.Controls.Add(this.txtCpf);
             this.gBox1.Controls.Add(this.label9);
             this.gBox1.Controls.Add(this.label8);
-            this.gBox1.Controls.Add(this.cbo1);
             this.gBox1.Controls.Add(this.txtData);
-            this.gBox1.Controls.Add(this.label7);
             this.gBox1.Controls.Add(this.label4);
             this.gBox1.Controls.Add(this.label3);
             this.gBox1.Controls.Add(this.txtSenha);
@@ -156,6 +152,16 @@
             this.gBox1.Size = new System.Drawing.Size(353, 411);
             this.gBox1.TabIndex = 36;
             this.gBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(41, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 18);
+            this.label11.TabIndex = 56;
+            this.label11.Text = "Nome:";
             // 
             // txtEndereco
             // 
@@ -207,16 +213,6 @@
             this.label8.TabIndex = 51;
             this.label8.Text = "Telefone:";
             // 
-            // cbo1
-            // 
-            this.cbo1.BackColor = System.Drawing.SystemColors.Window;
-            this.cbo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo1.FormattingEnabled = true;
-            this.cbo1.Location = new System.Drawing.Point(203, 383);
-            this.cbo1.Name = "cbo1";
-            this.cbo1.Size = new System.Drawing.Size(109, 21);
-            this.cbo1.TabIndex = 50;
-            // 
             // txtData
             // 
             this.txtData.Location = new System.Drawing.Point(224, 161);
@@ -225,16 +221,6 @@
             this.txtData.Size = new System.Drawing.Size(88, 20);
             this.txtData.TabIndex = 43;
             this.txtData.ValidatingType = typeof(System.DateTime);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(204, 355);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 18);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Tipo Usuario";
             // 
             // label4
             // 
@@ -263,7 +249,7 @@
             this.txtSenha.Location = new System.Drawing.Point(45, 378);
             this.txtSenha.MaxLength = 150;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(150, 26);
+            this.txtSenha.Size = new System.Drawing.Size(266, 26);
             this.txtSenha.TabIndex = 42;
             // 
             // txtCidade
@@ -362,16 +348,6 @@
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(41, 8);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 18);
-            this.label11.TabIndex = 56;
-            this.label11.Text = "Nome:";
-            // 
             // FrmExcluir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,9 +390,7 @@
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbo1;
         private System.Windows.Forms.MaskedTextBox txtData;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSenha;

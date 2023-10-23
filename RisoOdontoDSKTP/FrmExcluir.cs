@@ -25,17 +25,9 @@ namespace RisoOdontoDSKTP
 
         private void FrmExcluir_Load(object sender, EventArgs e)
         {
-            CarregaCbo1();
             gBox1.Enabled = btnLimpar.Enabled = btnExcluir.Enabled = false;
         }
 
-        //carrega cbo1
-        public void CarregaCbo1()
-        {
-            cbo1.ValueMember = "IdTipoUsuario";
-            cbo1.DisplayMember = "Descricao";
-            cbo1.DataSource = objBLL.CarregaTpUsuarioDDL().ToList();
-        }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
@@ -108,7 +100,6 @@ namespace RisoOdontoDSKTP
                 txtEndereco.Text = objDTO.Endereco;
                 txtSenha.Text = objDTO.Senha;
 
-                cbo1.SelectedValue = Convert.ToInt32(objDTO.TipoUsuarioId);
                 btnExcluir.Enabled = btnLimpar.Enabled = true;
             }
             txtId.Enabled = btnPesquisar.Enabled = false;
