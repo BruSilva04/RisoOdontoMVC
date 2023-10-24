@@ -67,9 +67,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Agendamento.html" />
+    <Content Include="Cadastro.aspx" />
+    <Content Include="index.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="Resource\css\Cadastro.css" />
+    <Content Include="Resource\css\style.css" />
+    <Content Include="Resource\js\index.js" />
+    <Content Include="RisoOdonto\CSS\agendamento.css" />
+    <Content Include="RisoOdonto\CSS\darkMode.css" />
+    <Content Include="RisoOdonto\CSS\style.css" />
+    <Content Include="RisoOdonto\img\contato.jpg" />
+    <Content Include="RisoOdonto\img\favicon.ico" />
+    <Content Include="RisoOdonto\img\home.png" />
+    <Content Include="RisoOdonto\img\sobre-nos.jpg" />
+    <Content Include="RisoOdonto\js\agendamento.js" />
+    <Content Include="RisoOdonto\js\darkMode.js" />
+    <Content Include="RisoOdonto\js\script.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utilitários\Limpar.cs" />
   </ItemGroup>
@@ -83,9 +114,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="resources\css\" />
-    <Folder Include="resources\font\" />
-    <Folder Include="resources\js\" />
+    <ProjectReference Include="..\RisoOdontoBLL\RisoOdontoBLL.csproj">
+      <Project>{E03B706A-2AC4-4272-B483-BF5CC9F64C99}</Project>
+      <Name>RisoOdontoBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RisoOdontoDTO\RisoOdontoDTO.csproj">
+      <Project>{27A408AB-8F1C-47DC-9F02-F7312267867F}</Project>
+      <Name>RisoOdontoDTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
