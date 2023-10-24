@@ -31,7 +31,8 @@
                         <asp:Label ID="lblSenha" runat="server" Text=""></asp:Label>
                     </div>
                     <br><br>
-                     <asp:Button ID="btnCadastrar" runat="server" Text="Login" onclientclick='redirect()' />
+                     <asp:Button ID="btnCadastrar" runat="server" Text="Login" OnClick="btnLogin_Click1" />
+                        
                       <asp:Label ID="lblMessage" runat="server"></asp:Label>
                 </fieldset>
         </form>

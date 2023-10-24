@@ -16,7 +16,7 @@ namespace RisoOdontoUI
 
         }
 
-        protected void btnLogin_Click(object sender, EventArgs e)
+        protected void btnLogin_Click1(object sender, EventArgs e)
         {
             try
             {
@@ -35,8 +35,7 @@ namespace RisoOdontoUI
                 //checar o tipo de usuario
                 if (usuario != null)
                 {
-
-                    lblMessage.Text = $"Bem Vindo {usuario.Nome}";
+                    Response.Redirect("~/Agendamento.html");
                 }
 
             }

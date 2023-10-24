@@ -145,7 +145,7 @@ namespace RisoOdontoUI
                 objBLL.Cadastrar(usuario);
                 Limpar.ClearControl(this);
                 btnCadastrar.Enabled = true;
-                lblMessage.Text = $"Usuário {usuario.Nome} cadastrado com sucesso !!";
+                Response.Redirect("~/Agendamento.html");
             }
         }
     }
