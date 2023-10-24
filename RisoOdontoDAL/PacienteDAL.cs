@@ -51,7 +51,7 @@ namespace RisoOdontoDAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("INSERT INTO Paciente (Nome,Email, Telefone, DataNascimento, CPF,Cidade, Endereço,Senha,TipoUsuarioId) VALUES (@Nome,@Email,@Telefone,@DataNascimento,@CPF,@Cidade,@Endereço,@Senha,@TipoUsuarioId);", conn);
+                cmd = new SqlCommand("INSERT INTO Paciente (Nome,Email, Telefone, DataNascimento, CPF,Cidade, Endereco,Senha,TipoUsuarioId) VALUES (@Nome,@Email,@Telefone,@DataNascimento,@CPF,@Cidade,@Endereco,@Senha,@TipoUsuarioId);", conn);
                 cmd.Parameters.AddWithValue("@Nome", objCad.Nome);
                 cmd.Parameters.AddWithValue("@Email", objCad.Email);
                 cmd.Parameters.AddWithValue("@Telefone", objCad.Telefone);
