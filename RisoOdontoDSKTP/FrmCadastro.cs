@@ -124,7 +124,7 @@ namespace RisoOdontoDSKTP
                 //preeencher os dados fornecidos pelo usuári
                 objDTO.Nome = txtNome.Text.Trim();
                 objDTO.Email = txtEmail.Text.Trim();
-                objDTO.Telefone = Convert.ToInt32(txtSenha.Text.Trim());
+                objDTO.Telefone = Convert.ToInt32(txtSenha.Text);
                 //ajustar a data
                 DateTime dt;
                 if (DateTime.TryParse(txtData.Text, out dt))
@@ -139,13 +139,14 @@ namespace RisoOdontoDSKTP
                     return;
                 }
 
-                objDTO.DataNascimento = Convert.ToDateTime(txtData.Text.Trim());
                 objDTO.CPF = txtCpf.Text.Trim();
                 objDTO.Cidade = txtCidade.Text.Trim();
                 objDTO.Endereco = txtEndereco.Text.Trim();
                 objDTO.Senha = txtSenha.Text.Trim();
                 objDTO.TipoUsuarioId = cbo1.SelectedValue.ToString();
 
+                //cadastrar
+                objBLL.Cadastrar(objCad);
                 Limpar.ClearControl(this);
                 btnCadastrar.Enabled = true;
 

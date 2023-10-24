@@ -117,7 +117,7 @@ namespace RisoOdontoDAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("UPDATE Paciente SET [Nome] = @Nome,[CPF]=@CPF,[DataNascimento]=@DataNascimento,[Email]=@Email,[Senha]=@Senha,[Telefone]=@Telefone,[Cidade]=@Cidade,[Endereco] = @Endereco,[TipoUsuarioId] = @TipoUsuarioId WHERE IdPaciente = @id;", conn);
+                cmd = new SqlCommand("UPDATE Paciente SET [Nome] = @Nome,[CPF]=@CPF,[DataNascimento]=@DataNascimento,[Email]=@Email,[Senha]=@Senha,[Telefone]=@Telefone,[Cidade]=@Cidade,[Endereco] = @Endereco WHERE IdPaciente = @id;", conn);
                 cmd.Parameters.AddWithValue("@Nome", objEdita.Nome);
                 cmd.Parameters.AddWithValue("@Email", objEdita.Email);
                 cmd.Parameters.AddWithValue("@Telefone", objEdita.Telefone);
@@ -126,7 +126,6 @@ namespace RisoOdontoDAL
                 cmd.Parameters.AddWithValue("@Cidade ", objEdita.Cidade);
                 cmd.Parameters.AddWithValue("@Endereco", objEdita.Endereco);
                 cmd.Parameters.AddWithValue("@Senha", objEdita.Senha);
-                cmd.Parameters.AddWithValue("@TipoUsuarioId", objEdita.TipoUsuarioId);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -147,7 +146,7 @@ namespace RisoOdontoDAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("DELETE FROM Paciente WHERE IdPaciente = @Id;", conn);
+                cmd = new SqlCommand("DELETE FROM Paciente WHERE Id = @Id;", conn);
                 cmd.Parameters.AddWithValue("@Id", objDel);
                 cmd.ExecuteNonQuery();
 

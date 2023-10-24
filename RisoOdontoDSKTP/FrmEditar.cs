@@ -25,7 +25,9 @@ namespace RisoOdontoDSKTP
 
         private void FrmEditar_Load(object sender, EventArgs e)
         {
-            gBox1.Enabled = btnEditar.Enabled = btnSalvar.Enabled = false;
+            gBox1.Enabled = false;
+            btnSalvar.Enabled = true;
+            btnEditar.Enabled = false;
         }
 
 
@@ -152,7 +154,7 @@ namespace RisoOdontoDSKTP
 
                 objDTO.IdPaciente = Convert.ToInt32(txtId.Text);
 
-                //preeencher os dados fornecidos pelo usuári
+                //preeencher os dados fornecidos pelo usuário
                 objDTO.Nome = txtNome.Text;
                 objDTO.Email = txtEmail.Text;
                 objDTO.Telefone = Convert.ToInt32(txtSenha.Text);

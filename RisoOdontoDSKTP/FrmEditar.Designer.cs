@@ -67,7 +67,7 @@
             this.btnEditar.Location = new System.Drawing.Point(515, 595);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(120, 80);
-            this.btnEditar.TabIndex = 53;
+            this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
@@ -79,7 +79,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(163, 595);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(120, 80);
-            this.btnSalvar.TabIndex = 52;
+            this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
             // 
@@ -114,7 +114,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(414, 90);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(90, 35);
-            this.btnPesquisar.TabIndex = 49;
+            this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -126,7 +126,7 @@
             this.txtId.MaxLength = 150;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(89, 26);
-            this.txtId.TabIndex = 47;
+            this.txtId.TabIndex = 1;
             // 
             // textId
             // 
@@ -146,7 +146,7 @@
             this.btnFechar.Location = new System.Drawing.Point(680, 10);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(125, 60);
-            this.btnFechar.TabIndex = 46;
+            this.btnFechar.TabIndex = 13;
             this.btnFechar.Text = "FECHAR";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -195,7 +195,7 @@
             this.txtEndereco.MaxLength = 150;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(267, 26);
-            this.txtEndereco.TabIndex = 54;
+            this.txtEndereco.TabIndex = 9;
             // 
             // label10
             // 
@@ -215,7 +215,7 @@
             this.txtCpf.MaxLength = 150;
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(267, 26);
-            this.txtCpf.TabIndex = 52;
+            this.txtCpf.TabIndex = 7;
             // 
             // label9
             // 
@@ -243,7 +243,7 @@
             this.txtData.Mask = "00/00/0000";
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(88, 20);
-            this.txtData.TabIndex = 43;
+            this.txtData.TabIndex = 6;
             this.txtData.ValidatingType = typeof(System.DateTime);
             // 
             // label4
@@ -274,7 +274,7 @@
             this.txtSenha.MaxLength = 150;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(267, 26);
-            this.txtSenha.TabIndex = 42;
+            this.txtSenha.TabIndex = 10;
             // 
             // txtCidade
             // 
@@ -284,7 +284,7 @@
             this.txtCidade.MaxLength = 150;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(267, 26);
-            this.txtCidade.TabIndex = 41;
+            this.txtCidade.TabIndex = 8;
             // 
             // txtTelefone
             // 
@@ -294,7 +294,7 @@
             this.txtTelefone.MaxLength = 150;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(267, 26);
-            this.txtTelefone.TabIndex = 40;
+            this.txtTelefone.TabIndex = 5;
             // 
             // label5
             // 
@@ -314,7 +314,7 @@
             this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(267, 26);
-            this.txtEmail.TabIndex = 39;
+            this.txtEmail.TabIndex = 4;
             // 
             // label2
             // 
@@ -334,7 +334,7 @@
             this.txtNome.MaxLength = 150;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(267, 26);
-            this.txtNome.TabIndex = 38;
+            this.txtNome.TabIndex = 3;
             // 
             // label1
             // 

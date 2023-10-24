@@ -63,7 +63,7 @@
             this.cbo1.Location = new System.Drawing.Point(426, 548);
             this.cbo1.Name = "cbo1";
             this.cbo1.Size = new System.Drawing.Size(109, 21);
-            this.cbo1.TabIndex = 18;
+            this.cbo1.TabIndex = 9;
             // 
             // txtData
             // 
@@ -71,7 +71,7 @@
             this.txtData.Mask = "00/00/0000";
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(88, 20);
-            this.txtData.TabIndex = 11;
+            this.txtData.TabIndex = 4;
             this.txtData.ValidatingType = typeof(System.DateTime);
             // 
             // label7
@@ -112,7 +112,7 @@
             this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(267, 26);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 2;
             // 
             // label2
             // 
@@ -132,7 +132,7 @@
             this.txtNome.MaxLength = 150;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(267, 26);
-            this.txtNome.TabIndex = 8;
+            this.txtNome.TabIndex = 1;
             // 
             // label6
             // 
@@ -163,7 +163,7 @@
             this.btnFechar.Location = new System.Drawing.Point(717, 41);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(125, 60);
-            this.btnFechar.TabIndex = 21;
+            this.btnFechar.TabIndex = 12;
             this.btnFechar.Text = "FECHAR";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -176,7 +176,7 @@
             this.txtTelefone.MaxLength = 150;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(267, 26);
-            this.txtTelefone.TabIndex = 9;
+            this.txtTelefone.TabIndex = 3;
             // 
             // label5
             // 
@@ -196,7 +196,7 @@
             this.txtCidade.MaxLength = 150;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(267, 26);
-            this.txtCidade.TabIndex = 9;
+            this.txtCidade.TabIndex = 6;
             // 
             // label8
             // 
@@ -216,7 +216,7 @@
             this.txtSenha.MaxLength = 150;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(150, 26);
-            this.txtSenha.TabIndex = 9;
+            this.txtSenha.TabIndex = 8;
             // 
             // btnCadastrar
             // 
@@ -226,7 +226,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(178, 612);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(120, 80);
-            this.btnCadastrar.TabIndex = 30;
+            this.btnCadastrar.TabIndex = 10;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -239,7 +239,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(504, 612);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(120, 80);
-            this.btnLimpar.TabIndex = 31;
+            this.btnLimpar.TabIndex = 11;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -263,7 +263,7 @@
             this.txtCpf.MaxLength = 150;
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(267, 26);
-            this.txtCpf.TabIndex = 34;
+            this.txtCpf.TabIndex = 5;
             // 
             // label9
             // 
@@ -283,7 +283,7 @@
             this.txtEndereco.MaxLength = 150;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(267, 26);
-            this.txtEndereco.TabIndex = 36;
+            this.txtEndereco.TabIndex = 7;
             // 
             // label10
             // 
