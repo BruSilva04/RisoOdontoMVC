@@ -4,3 +4,4 @@
 function redirect() {
     location.href = '/agendamento.html';
 }
+
