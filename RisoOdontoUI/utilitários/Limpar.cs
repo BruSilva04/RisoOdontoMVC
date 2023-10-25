@@ -33,7 +33,6 @@ namespace RisoOdontoDSKTP.utilitários
                 ClearControl(c);
 
 
-
             }
         }
     }
