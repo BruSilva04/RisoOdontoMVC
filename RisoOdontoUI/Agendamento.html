@@ -1,81 +1,83 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- arquivos style -->
-  <link href="RisoOdonto/CSS/agendamento.css" rel="stylesheet">
-  <link href="RisoOdonto/CSS/darkMode.css" rel="stylesheet">
+    <!-- arquivos style -->
+    <link href="RisoOdonto/CSS/agendamento.css" rel="stylesheet">
+    <link href="RisoOdonto/CSS/darkMode.css" rel="stylesheet">
 
-  <title>Calendario</title>
+    <title>Calendario</title>
 </head>
-  <!-- dark mode -->
-  
-  <div class="toggle">
+<!-- dark mode -->
+
+<div class="toggle">
     <input id="switch" type="checkbox" name="theme">
     <label for="switch">Toggle</label>
-  </div>
+</div>
 
 <!-- -------- -->
 
 <body>
-  <div id="container">
-      <div id="header">
-        <div id="monthDisplay"></div>
+    <div id="container">
+        <div id="header">
+            <div id="monthDisplay"></div>
 
-        <div>
-          <button id="backButton">Voltar</button>
-          <button id="nextButton">Próximo</button>
+            <div>
+                <button id="backButton">Voltar</button>
+                <button id="nextButton">Próximo</button>
+            </div>
+
         </div>
-          
-      </div>
 
-      <div id="weekdays">
-        <div>Domingo</div>
-        <div>Segunda-feira</div>
-        <div>Terça-feira</div>
-        <div>Quarta-feira</div>
-        <div>Quinta-feira</div>
-        <div>Sexta-feira</div>
-        <div>Sábado</div>
-      </div>
+        <div id="weekdays">
+            <div>Domingo</div>
+            <div>Segunda-feira</div>
+            <div>Terça-feira</div>
+            <div>Quarta-feira</div>
+            <div>Quinta-feira</div>
+            <div>Sexta-feira</div>
+            <div>Sábado</div>
+        </div>
 
 
-      <!-- div dinamic -->
-      <div id="calendar" ></div>
-
-   
-  </div>
-
-  <div id="newEventModal">
-      <h2>Agendamento</h2>
-
-      <input id="eventTitleInput" placeholder="Nome Completo" />
-      <input id="eventTitleInput" placeholder="Especialidade" />
-      <input id="eventTitleInput" placeholder="Primeira Consulta?" />
-      <input id="eventTitleInput" placeholder="Se não, qual o Dr.?" />
-
-      <button id="saveButton">  Agendar</button>
-      <button id="cancelButton">Cancelar</button>
-  </div>
-
-  <div id="deleteEventModal">
-      <h2>Encaminhar</h2>
-
-      <div id="eventText"></div><br>
-
-      <button id="WhatButton"><a class="whatsapp-link" href="https://web.whatsapp.com/sen?phone=5511979682022" target="_blank">Encaminhar via zapzap</a></button>
-      <button id="deleteButton">Excluir</button>
-      <button id="closeButton">Fechar</button>
-  </div>
-
-  <div id="modalBackDrop"></div>
+        <!-- div dinamic -->
+        <div id="calendar"></div>
 
 
-  <script src="RisoOdonto/js/darkMode.js"></script>
-  <script src="RisoOdonto/js/agendamento.js"></script>
-  
+    </div>
+
+    <div id="newEventModal">
+        <h2>Agendamento</h2>
+
+        <input id="eventTitleInput" placeholder="Nome Completo" />
+        <input id="eventTitleInput" placeholder="Especialidade" />
+        <input id="eventTitleInput" placeholder="Primeira Consulta?" />
+        <input id="eventTitleInput" placeholder="Se não, qual o Dr.?" />
+
+        <button id="saveButton">  Agendar</button>
+        <button id="cancelButton">Cancelar</button>
+    </div>
+
+    <div id="deleteEventModal">
+        <h2>Encaminhar</h2>
+
+        <div id="eventText"></div><br>
+
+        <button id="WhatButton"><a class="whatsapp-link" href="https://web.whatsapp.com/sen?phone=5511979682022" target="_blank">Encaminhar via zapzap</a></button>
+        <button id="deleteButton">Excluir</button>
+        <button id="closeButton">Fechar</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+
+    <script src="RisoOdonto/js/darkMode.js"></script>
+    <script src="RisoOdonto/js/agendamento.js"></script>
+
 </body>
 </html>

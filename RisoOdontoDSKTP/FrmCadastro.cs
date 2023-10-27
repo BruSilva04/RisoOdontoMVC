@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -124,8 +125,8 @@ namespace RisoOdontoDSKTP
                 //preeencher os dados fornecidos pelo usuári
                 objDTO.Nome = txtNome.Text.Trim();
                 objDTO.Email = txtEmail.Text.Trim();
-                objDTO.Telefone = Convert.ToInt32(txtSenha.Text);
-                //ajustar a data
+                objDTO.Telefone = Convert.ToInt32(txtTelefone.Text.Trim());
+                // Ajustar a data
                 DateTime dt;
                 if (DateTime.TryParse(txtData.Text, out dt))
                 {
@@ -133,7 +134,7 @@ namespace RisoOdontoDSKTP
                 }
                 else
                 {
-                    MessageBox.Show("Digite uma data válida!!");
+                    MessageBox.Show("Digite uma data válida no formato dd/mm/aaaa.");
                     txtData.Text = string.Empty;
                     txtData.Focus();
                     return;
@@ -146,7 +147,7 @@ namespace RisoOdontoDSKTP
                 objDTO.TipoUsuarioId = cbo1.SelectedValue.ToString();
 
                 //cadastrar
-                objBLL.Cadastrar(objCad);
+                objBLL.Cadastrar(objDTO);
                 Limpar.ClearControl(this);
                 btnCadastrar.Enabled = true;
 
