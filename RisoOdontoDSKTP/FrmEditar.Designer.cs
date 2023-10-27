@@ -363,7 +363,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEditar";
             this.Text = "FrmEditar";
-            this.Load += new System.EventHandler(this.FrmEditar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gBox1.ResumeLayout(false);
             this.gBox1.PerformLayout();

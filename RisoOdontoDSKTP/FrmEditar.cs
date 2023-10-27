@@ -26,7 +26,7 @@ namespace RisoOdontoDSKTP
         private void FrmEditar_Load(object sender, EventArgs e)
         {
             gBox1.Enabled = false;
-            btnSalvar.Enabled = true;
+            btnSalvar.Enabled = false;
             btnEditar.Enabled = false;
         }
 
