@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgenda));
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.LblStatus = new System.Windows.Forms.Label();
             this.CmbTipo = new System.Windows.Forms.ComboBox();
             this.mskDataHorario = new System.Windows.Forms.MaskedTextBox();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtDr = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +51,7 @@
             this.AgendarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ExcluirtoolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -61,21 +64,42 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtNome);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.LblStatus);
             this.groupBox1.Controls.Add(this.CmbTipo);
             this.groupBox1.Controls.Add(this.mskDataHorario);
-            this.groupBox1.Controls.Add(this.txtComplemento);
+            this.groupBox1.Controls.Add(this.txtDr);
             this.groupBox1.Controls.Add(this.txtDescricao);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(330, 85);
+            this.groupBox1.Location = new System.Drawing.Point(330, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(486, 266);
+            this.groupBox1.Size = new System.Drawing.Size(486, 303);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(142, 16);
+            this.txtNome.MaxLength = 50;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(269, 23);
+            this.txtNome.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(91, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 17);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Nome";
             // 
             // LblStatus
             // 
@@ -111,14 +135,14 @@
             this.mskDataHorario.Size = new System.Drawing.Size(100, 20);
             this.mskDataHorario.TabIndex = 7;
             // 
-            // txtComplemento
+            // txtDr
             // 
-            this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(142, 178);
-            this.txtComplemento.MaxLength = 50;
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(269, 23);
-            this.txtComplemento.TabIndex = 6;
+            this.txtDr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDr.Location = new System.Drawing.Point(142, 178);
+            this.txtDr.MaxLength = 50;
+            this.txtDr.Name = "txtDr";
+            this.txtDr.Size = new System.Drawing.Size(269, 23);
+            this.txtDr.TabIndex = 6;
             // 
             // txtDescricao
             // 
@@ -143,11 +167,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 178);
+            this.label4.Location = new System.Drawing.Point(109, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 17);
+            this.label4.Size = new System.Drawing.Size(27, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Complemento";
+            this.label4.Text = "Dr.";
             // 
             // label3
             // 
@@ -255,11 +279,21 @@
             this.ExcluirtoolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ExcluirtoolStripButton1.ToolTipText = "Excluir agendamento";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(28, 432);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(787, 224);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // FrmAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 620);
+            this.ClientSize = new System.Drawing.Size(847, 676);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.monthCalendar1);
@@ -286,7 +320,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox mskDataHorario;
-        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.TextBox txtDr;
         private System.Windows.Forms.ComboBox CmbTipo;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton novoToolStripButton;
@@ -297,5 +331,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label LblStatus;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label7;
     }
 }
