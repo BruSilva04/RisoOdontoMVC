@@ -28,579 +28,274 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DayContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnProximo = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgenda));
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.DayContainer.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LblStatus = new System.Windows.Forms.Label();
+            this.CmbTipo = new System.Windows.Forms.ComboBox();
+            this.mskDataHorario = new System.Windows.Forms.MaskedTextBox();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.novoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.AgendarToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ExcluirtoolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DayContainer
-            // 
-            this.DayContainer.Controls.Add(this.panel26);
-            this.DayContainer.Controls.Add(this.panel2);
-            this.DayContainer.Controls.Add(this.panel1);
-            this.DayContainer.Controls.Add(this.panel4);
-            this.DayContainer.Controls.Add(this.panel3);
-            this.DayContainer.Controls.Add(this.panel8);
-            this.DayContainer.Controls.Add(this.panel7);
-            this.DayContainer.Controls.Add(this.panel6);
-            this.DayContainer.Controls.Add(this.panel5);
-            this.DayContainer.Controls.Add(this.panel12);
-            this.DayContainer.Controls.Add(this.panel16);
-            this.DayContainer.Controls.Add(this.panel15);
-            this.DayContainer.Controls.Add(this.panel14);
-            this.DayContainer.Controls.Add(this.panel13);
-            this.DayContainer.Controls.Add(this.panel11);
-            this.DayContainer.Controls.Add(this.panel10);
-            this.DayContainer.Controls.Add(this.panel9);
-            this.DayContainer.Controls.Add(this.panel20);
-            this.DayContainer.Controls.Add(this.panel24);
-            this.DayContainer.Controls.Add(this.panel23);
-            this.DayContainer.Controls.Add(this.panel22);
-            this.DayContainer.Controls.Add(this.panel21);
-            this.DayContainer.Controls.Add(this.panel19);
-            this.DayContainer.Controls.Add(this.panel18);
-            this.DayContainer.Controls.Add(this.panel25);
-            this.DayContainer.Controls.Add(this.panel17);
-            this.DayContainer.Controls.Add(this.panel31);
-            this.DayContainer.Controls.Add(this.panel36);
-            this.DayContainer.Controls.Add(this.panel35);
-            this.DayContainer.Controls.Add(this.panel34);
-            this.DayContainer.Controls.Add(this.panel33);
-            this.DayContainer.Controls.Add(this.panel32);
-            this.DayContainer.Controls.Add(this.panel30);
-            this.DayContainer.Controls.Add(this.panel40);
-            this.DayContainer.Controls.Add(this.panel42);
-            this.DayContainer.Controls.Add(this.panel41);
-            this.DayContainer.Controls.Add(this.panel39);
-            this.DayContainer.Controls.Add(this.panel38);
-            this.DayContainer.Controls.Add(this.panel37);
-            this.DayContainer.Controls.Add(this.panel29);
-            this.DayContainer.Controls.Add(this.panel28);
-            this.DayContainer.Controls.Add(this.panel27);
-            this.DayContainer.Location = new System.Drawing.Point(12, 115);
-            this.DayContainer.Name = "DayContainer";
-            this.DayContainer.Size = new System.Drawing.Size(956, 546);
-            this.DayContainer.TabIndex = 0;
-            // 
-            // panel26
-            // 
-            this.panel26.Location = new System.Drawing.Point(3, 3);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(130, 83);
-            this.panel26.TabIndex = 24;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(139, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(130, 83);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(275, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(130, 83);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(411, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(130, 83);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(547, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(130, 83);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(683, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(130, 83);
-            this.panel8.TabIndex = 7;
-            // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(819, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(130, 83);
-            this.panel7.TabIndex = 6;
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(3, 92);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(130, 83);
-            this.panel6.TabIndex = 4;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(139, 92);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(130, 83);
-            this.panel5.TabIndex = 5;
-            // 
-            // panel12
-            // 
-            this.panel12.Location = new System.Drawing.Point(275, 92);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(130, 83);
-            this.panel12.TabIndex = 11;
-            // 
-            // panel16
-            // 
-            this.panel16.Location = new System.Drawing.Point(411, 92);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(130, 83);
-            this.panel16.TabIndex = 13;
-            // 
-            // panel15
-            // 
-            this.panel15.Location = new System.Drawing.Point(547, 92);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(130, 83);
-            this.panel15.TabIndex = 12;
-            // 
-            // panel14
-            // 
-            this.panel14.Location = new System.Drawing.Point(683, 92);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(130, 83);
-            this.panel14.TabIndex = 14;
-            // 
-            // panel13
-            // 
-            this.panel13.Location = new System.Drawing.Point(819, 92);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(130, 83);
-            this.panel13.TabIndex = 15;
-            // 
-            // panel11
-            // 
-            this.panel11.Location = new System.Drawing.Point(3, 181);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(130, 83);
-            this.panel11.TabIndex = 10;
-            // 
-            // panel10
-            // 
-            this.panel10.Location = new System.Drawing.Point(139, 181);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(130, 83);
-            this.panel10.TabIndex = 8;
-            // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(275, 181);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(130, 83);
-            this.panel9.TabIndex = 9;
-            // 
-            // panel20
-            // 
-            this.panel20.Location = new System.Drawing.Point(411, 181);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(130, 83);
-            this.panel20.TabIndex = 22;
-            // 
-            // panel24
-            // 
-            this.panel24.Location = new System.Drawing.Point(547, 181);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(130, 83);
-            this.panel24.TabIndex = 17;
-            // 
-            // panel23
-            // 
-            this.panel23.Location = new System.Drawing.Point(683, 181);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(130, 83);
-            this.panel23.TabIndex = 16;
-            // 
-            // panel22
-            // 
-            this.panel22.Location = new System.Drawing.Point(819, 181);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(130, 83);
-            this.panel22.TabIndex = 18;
-            // 
-            // panel21
-            // 
-            this.panel21.Location = new System.Drawing.Point(3, 270);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(130, 83);
-            this.panel21.TabIndex = 23;
-            // 
-            // panel19
-            // 
-            this.panel19.Location = new System.Drawing.Point(139, 270);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(130, 83);
-            this.panel19.TabIndex = 20;
-            // 
-            // panel18
-            // 
-            this.panel18.Location = new System.Drawing.Point(275, 270);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(130, 83);
-            this.panel18.TabIndex = 21;
-            // 
-            // panel25
-            // 
-            this.panel25.Location = new System.Drawing.Point(411, 270);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(130, 83);
-            this.panel25.TabIndex = 20;
-            // 
-            // panel17
-            // 
-            this.panel17.Location = new System.Drawing.Point(547, 270);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(130, 83);
-            this.panel17.TabIndex = 19;
-            // 
-            // panel31
-            // 
-            this.panel31.Location = new System.Drawing.Point(683, 270);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(130, 83);
-            this.panel31.TabIndex = 28;
-            // 
-            // panel36
-            // 
-            this.panel36.Location = new System.Drawing.Point(819, 270);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(130, 83);
-            this.panel36.TabIndex = 29;
-            // 
-            // panel35
-            // 
-            this.panel35.Location = new System.Drawing.Point(3, 359);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(130, 83);
-            this.panel35.TabIndex = 31;
-            // 
-            // panel34
-            // 
-            this.panel34.Location = new System.Drawing.Point(139, 359);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(130, 83);
-            this.panel34.TabIndex = 32;
-            // 
-            // panel33
-            // 
-            this.panel33.Location = new System.Drawing.Point(275, 359);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(130, 83);
-            this.panel33.TabIndex = 30;
-            // 
-            // panel32
-            // 
-            this.panel32.Location = new System.Drawing.Point(411, 359);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(130, 83);
-            this.panel32.TabIndex = 34;
-            // 
-            // panel30
-            // 
-            this.panel30.Location = new System.Drawing.Point(547, 359);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(130, 83);
-            this.panel30.TabIndex = 26;
-            // 
-            // panel40
-            // 
-            this.panel40.Location = new System.Drawing.Point(683, 359);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(130, 83);
-            this.panel40.TabIndex = 37;
-            // 
-            // panel42
-            // 
-            this.panel42.Location = new System.Drawing.Point(819, 359);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(130, 83);
-            this.panel42.TabIndex = 35;
-            // 
-            // panel41
-            // 
-            this.panel41.Location = new System.Drawing.Point(3, 448);
-            this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(130, 83);
-            this.panel41.TabIndex = 39;
-            // 
-            // panel39
-            // 
-            this.panel39.Location = new System.Drawing.Point(139, 448);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(130, 83);
-            this.panel39.TabIndex = 36;
-            // 
-            // panel38
-            // 
-            this.panel38.Location = new System.Drawing.Point(275, 448);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(130, 83);
-            this.panel38.TabIndex = 40;
-            // 
-            // panel37
-            // 
-            this.panel37.Location = new System.Drawing.Point(411, 448);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(130, 83);
-            this.panel37.TabIndex = 38;
-            // 
-            // panel29
-            // 
-            this.panel29.Location = new System.Drawing.Point(547, 448);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(130, 83);
-            this.panel29.TabIndex = 27;
-            // 
-            // panel28
-            // 
-            this.panel28.Location = new System.Drawing.Point(683, 448);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(130, 83);
-            this.panel28.TabIndex = 33;
-            // 
-            // panel27
-            // 
-            this.panel27.Location = new System.Drawing.Point(819, 448);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(130, 83);
-            this.panel27.TabIndex = 25;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Location = new System.Drawing.Point(780, 667);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltar.TabIndex = 1;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            // 
-            // btnProximo
-            // 
-            this.btnProximo.Location = new System.Drawing.Point(886, 667);
-            this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(75, 23);
-            this.btnProximo.TabIndex = 2;
-            this.btnProximo.Text = "Proximo";
-            this.btnProximo.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Segunda-Feira";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(176, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Terça-Feira";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(300, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Quarta-Feira";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(438, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Quinta-Feira";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(578, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 19);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Sexta-Feira";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(855, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Domingo";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(726, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 19);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Sabado";
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.LblStatus);
+            this.groupBox1.Controls.Add(this.CmbTipo);
+            this.groupBox1.Controls.Add(this.mskDataHorario);
+            this.groupBox1.Controls.Add(this.txtComplemento);
+            this.groupBox1.Controls.Add(this.txtDescricao);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(330, 85);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(486, 266);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // LblStatus
+            // 
+            this.LblStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStatus.Location = new System.Drawing.Point(142, 223);
+            this.LblStatus.Name = "LblStatus";
+            this.LblStatus.Size = new System.Drawing.Size(101, 22);
+            this.LblStatus.TabIndex = 9;
+            this.LblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CmbTipo
+            // 
+            this.CmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTipo.FormattingEnabled = true;
+            this.CmbTipo.Items.AddRange(new object[] {
+            "1 - Odontopediatria",
+            "2 - Clínico geral",
+            "3 - Implantodontia",
+            "4 - Odontologia estética",
+            "5 - Radiologia odontológica",
+            "6 - Ortodontia"});
+            this.CmbTipo.Location = new System.Drawing.Point(160, 131);
+            this.CmbTipo.Name = "CmbTipo";
+            this.CmbTipo.Size = new System.Drawing.Size(251, 21);
+            this.CmbTipo.TabIndex = 8;
+            // 
+            // mskDataHorario
+            // 
+            this.mskDataHorario.Location = new System.Drawing.Point(143, 91);
+            this.mskDataHorario.Mask = "00/00/0000 00:00";
+            this.mskDataHorario.Name = "mskDataHorario";
+            this.mskDataHorario.Size = new System.Drawing.Size(100, 20);
+            this.mskDataHorario.TabIndex = 7;
+            // 
+            // txtComplemento
+            // 
+            this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(142, 178);
+            this.txtComplemento.MaxLength = 50;
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(269, 23);
+            this.txtComplemento.TabIndex = 6;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(142, 52);
+            this.txtDescricao.MaxLength = 50;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(269, 23);
+            this.txtDescricao.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(88, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Status";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(42, 178);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Complemento";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tipo de Especialidade";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(35, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Data e Horário";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(65, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Descrição";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthCalendar1.Location = new System.Drawing.Point(62, 85);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(57, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(209, 23);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "AGENDAMENTO";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoToolStripButton,
+            this.toolStripSeparator,
+            this.AgendarToolStripButton,
+            this.toolStripSeparator1,
+            this.ExcluirtoolStripButton1});
+            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.toolStrip1.Location = new System.Drawing.Point(62, 256);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(111, 154);
+            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // novoToolStripButton
+            // 
+            this.novoToolStripButton.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.novoToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("novoToolStripButton.Image")));
+            this.novoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.novoToolStripButton.Name = "novoToolStripButton";
+            this.novoToolStripButton.Size = new System.Drawing.Size(109, 39);
+            this.novoToolStripButton.Text = "&Novo";
+            this.novoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.novoToolStripButton.ToolTipText = "Nova tarefa";
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(109, 6);
+            // 
+            // AgendarToolStripButton
+            // 
+            this.AgendarToolStripButton.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.AgendarToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("AgendarToolStripButton.Image")));
+            this.AgendarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AgendarToolStripButton.Name = "AgendarToolStripButton";
+            this.AgendarToolStripButton.Size = new System.Drawing.Size(109, 39);
+            this.AgendarToolStripButton.Text = "&Agendar";
+            this.AgendarToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.AgendarToolStripButton.ToolTipText = "Agendar";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(109, 6);
+            // 
+            // ExcluirtoolStripButton1
+            // 
+            this.ExcluirtoolStripButton1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ExcluirtoolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("ExcluirtoolStripButton1.Image")));
+            this.ExcluirtoolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExcluirtoolStripButton1.Name = "ExcluirtoolStripButton1";
+            this.ExcluirtoolStripButton1.Size = new System.Drawing.Size(109, 39);
+            this.ExcluirtoolStripButton1.Text = "&Excluir";
+            this.ExcluirtoolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ExcluirtoolStripButton1.ToolTipText = "Excluir agendamento";
+            // 
             // FrmAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 702);
-            this.Controls.Add(this.DayContainer);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(847, 620);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnProximo);
-            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAgenda";
             this.Text = "FrmAgenda";
-            this.Load += new System.EventHandler(this.FrmAgenda_Load);
-            this.DayContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel DayContainer;
-        private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnProximo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.Panel panel36;
-        private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.Panel panel33;
-        private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.Panel panel40;
-        private System.Windows.Forms.Panel panel42;
-        private System.Windows.Forms.Panel panel41;
-        private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.Panel panel38;
-        private System.Windows.Forms.Panel panel37;
-        private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Panel panel26;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox mskDataHorario;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.ComboBox CmbTipo;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton novoToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripButton AgendarToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton ExcluirtoolStripButton1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label LblStatus;
     }
 }
