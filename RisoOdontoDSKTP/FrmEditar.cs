@@ -15,29 +15,24 @@ namespace RisoOdontoDSKTP
 {
     public partial class FrmEditar : Form
     {
-
-        PacienteBLL objBLL = new PacienteBLL();
-        PacienteDTO objDTO = new PacienteDTO();
         public FrmEditar()
         {
             InitializeComponent();
         }
 
-        private void FrmEditar_Load(object sender, EventArgs e)
+        PacienteBLL objBLL = new PacienteBLL();
+        PacienteDTO objDTO = new PacienteDTO();
+
+        //Load form
+        private void FrmEditar_Load_1(object sender, EventArgs e)
         {
             gBox1.Enabled = false;
             btnSalvar.Enabled = false;
             btnEditar.Enabled = false;
         }
 
-
-        private void btnFechar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-
-        public bool ValidaForm()
+        //validaPage
+        public bool validaForm()
         {
             //criando variavel de retorno
             bool validator;
@@ -99,7 +94,14 @@ namespace RisoOdontoDSKTP
             return validator;
 
         }
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        //Fechar
+        private void btnFechar_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        //Pesquisar
+        private void btnPesquisar_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtId.Text))
             {
@@ -124,20 +126,22 @@ namespace RisoOdontoDSKTP
                 objDTO = objBLL.BuscaUsuarioPorId(codigo);
                 txtNome.Text = objDTO.Nome;
                 txtEmail.Text = objDTO.Email;
-                txtTelefone.Text = objDTO.Telefone.ToString();
                 txtData.Text = objDTO.DataNascimento.ToString();
+                txtTelefone.Text = objDTO.Telefone.ToString();
                 txtCpf.Text = objDTO.CPF;
                 txtCidade.Text = objDTO.Cidade;
                 txtEndereco.Text = objDTO.Endereco;
                 txtSenha.Text = objDTO.Senha;
 
+
+
+
                 btnEditar.Enabled = true;
             }
-            
         }
 
         //Editar - Liberação dos campos para acesso
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
             gBox1.Enabled = true;
             btnSalvar.Enabled = true;
@@ -146,18 +150,18 @@ namespace RisoOdontoDSKTP
         }
 
         //Update - salvando as alterações
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void btnSalvar_Click_1(object sender, EventArgs e)
         {
-            if (ValidaForm())
+            if (validaForm())
             {
                 PacienteDTO objDTO = new PacienteDTO();
 
                 objDTO.IdPaciente = Convert.ToInt32(txtId.Text);
 
-                //preeencher os dados fornecidos pelo usuário
+                //preeencher os dados fornecidos pelo usuári
                 objDTO.Nome = txtNome.Text;
                 objDTO.Email = txtEmail.Text;
-                objDTO.Telefone = Convert.ToInt32(txtSenha.Text);
+                objDTO.Telefone = Convert.ToInt32(txtTelefone.Text);
                 //ajustar a data
                 DateTime dt;
                 if (DateTime.TryParse(txtData.Text, out dt))
@@ -171,13 +175,11 @@ namespace RisoOdontoDSKTP
                     txtData.Focus();
                     return;
                 }
-
                 objDTO.DataNascimento = Convert.ToDateTime(txtData.Text);
                 objDTO.CPF = txtCpf.Text;
                 objDTO.Cidade = txtCidade.Text;
                 objDTO.Endereco = txtEndereco.Text;
                 objDTO.Senha = txtSenha.Text;
-
 
 
                 //Editando as informações
@@ -203,5 +205,7 @@ namespace RisoOdontoDSKTP
                 e.Handled = true;
             }
         }
+
+
     }
 }
