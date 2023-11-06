@@ -17,21 +17,6 @@ namespace RisoOdontoDSKTP
             InitializeComponent();
         }
 
-        private void agendaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.agendaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
-
-        private void FrmAgenda_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'database1DataSet.Agenda'. Você pode movê-la ou removê-la conforme necessário.
-            this.agendaTableAdapter.Fill(this.database1DataSet.Agenda);
-
-        }
-
 
     }
 }

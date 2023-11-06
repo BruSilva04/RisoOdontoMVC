@@ -267,7 +267,7 @@
             this.agendaBindingNavigatorSaveItem.Name = "agendaBindingNavigatorSaveItem";
             this.agendaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.agendaBindingNavigatorSaveItem.Text = "Salvar Dados";
-            this.agendaBindingNavigatorSaveItem.Click += new System.EventHandler(this.agendaBindingNavigatorSaveItem_Click);
+
             // 
             // agendaDataGridView
             // 
@@ -476,7 +476,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAgenda";
             this.Text = "FrmAgenda";
-            this.Load += new System.EventHandler(this.FrmAgenda_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
