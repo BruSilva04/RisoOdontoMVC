@@ -53,7 +53,7 @@
             this.Excluir = new System.Windows.Forms.ToolStripButton();
             this.Editar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.Agenda = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.Calculadora = new System.Windows.Forms.ToolStripButton();
             this.Notepad = new System.Windows.Forms.ToolStripButton();
@@ -191,7 +191,7 @@
             this.Excluir,
             this.Editar,
             this.toolStripSeparator1,
-            this.toolStripButton5,
+            this.Agenda,
             this.toolStripSeparator2,
             this.Calculadora,
             this.Notepad,
@@ -249,14 +249,15 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 63);
             // 
-            // toolStripButton5
+            // Agenda
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(60, 60);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.Agenda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Agenda.Image = ((System.Drawing.Image)(resources.GetObject("Agenda.Image")));
+            this.Agenda.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Agenda.Name = "Agenda";
+            this.Agenda.Size = new System.Drawing.Size(60, 60);
+            this.Agenda.Text = "Agenda";
+            this.Agenda.Click += new System.EventHandler(this.Agenda_Click);
             // 
             // toolStripSeparator2
             // 
@@ -354,7 +355,7 @@
         private System.Windows.Forms.ToolStripButton Excluir;
         private System.Windows.Forms.ToolStripButton Editar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton Agenda;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton Calculadora;
         private System.Windows.Forms.ToolStripButton Notepad;

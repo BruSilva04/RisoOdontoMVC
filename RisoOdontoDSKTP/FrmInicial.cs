@@ -63,5 +63,11 @@ namespace RisoOdontoDSKTP
             FrmEditar obj = new FrmEditar();
             obj.ShowDialog();
         }
+
+        private void Agenda_Click(object sender, EventArgs e)
+        {
+            FrmAgenda obj = new FrmAgenda();
+            obj.ShowDialog();
+        }
     }
 }

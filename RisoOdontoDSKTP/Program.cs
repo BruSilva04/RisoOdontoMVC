@@ -16,7 +16,7 @@ namespace RisoOdontoDSKTP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEditar());
+            Application.Run(new FrmLogin());
         }
     }
 }
