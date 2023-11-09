@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DentistaBLL.cs" />
     <Compile Include="FuncionarioBLL.cs" />
     <Compile Include="PacienteBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

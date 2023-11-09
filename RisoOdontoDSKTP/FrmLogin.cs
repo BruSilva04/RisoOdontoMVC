@@ -57,7 +57,6 @@ namespace RisoOdontoDSKTP
                     txtUsuario.Focus();
                 }
 
-
             }
             catch (Exception)
             {
