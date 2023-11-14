@@ -24,6 +24,10 @@ namespace RisoOdontoDSKTP
         {
             Application.Exit();
         }
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void Calculadora_Click(object sender, EventArgs e)
         {
@@ -39,8 +43,27 @@ namespace RisoOdontoDSKTP
         {
             System.Diagnostics.Process.Start("winword");
         }
+        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc");
+        }
+
+        private void blocoDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("notepad");
+        }
+
+        private void wordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+        }
 
         private void Cadastro_Click(object sender, EventArgs e)
+        {
+            FrmCadastro obj = new FrmCadastro();
+            obj.ShowDialog();
+        }
+        private void cadastroDePacientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCadastro obj = new FrmCadastro();
             obj.ShowDialog();
@@ -51,8 +74,18 @@ namespace RisoOdontoDSKTP
             FrmListar obj = new FrmListar();
             obj.ShowDialog();
         }
+        private void listarPacientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListar obj = new FrmListar();
+            obj.ShowDialog();
+        }
 
         private void Excluir_Click(object sender, EventArgs e)
+        {
+            FrmExcluir obj = new FrmExcluir();
+            obj.ShowDialog();
+        }
+        private void excluirPacientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmExcluir obj = new FrmExcluir();
             obj.ShowDialog();
@@ -63,11 +96,26 @@ namespace RisoOdontoDSKTP
             FrmEditar obj = new FrmEditar();
             obj.ShowDialog();
         }
+        private void editarPacientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEditar obj = new FrmEditar();
+            obj.ShowDialog();
+        }
 
         private void Agenda_Click(object sender, EventArgs e)
         {
             FrmAgenda obj = new FrmAgenda();
             obj.ShowDialog();
         }
+
+        private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAgenda obj = new FrmAgenda();
+            obj.ShowDialog();
+        }
+
+        
+
+
     }
 }
