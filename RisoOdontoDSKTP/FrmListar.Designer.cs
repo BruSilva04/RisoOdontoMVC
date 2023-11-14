@@ -63,7 +63,7 @@
             this.btnFechar.BackColor = System.Drawing.Color.Red;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFechar.Location = new System.Drawing.Point(828, 23);
+            this.btnFechar.Location = new System.Drawing.Point(807, 23);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(125, 60);
             this.btnFechar.TabIndex = 25;
